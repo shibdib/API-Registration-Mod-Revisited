@@ -17,7 +17,6 @@ Install
 ```
 1. Install a clean version of phpBB 3.0.14 and AUTOMOD
 
-
 2. Download the latest release as a .zip and install using AUTOMOD
 
 3. Clear forum cache
