@@ -37,7 +37,7 @@ if (empty($lang) || !is_array($lang))
 
 // Umil EVEAPI Settings
 $lang = array_merge($lang, array(
-    'UMIL_EVEAPI'                           => 'EVE API MOD by Cyerus',
+    'UMIL_EVEAPI'                           => 'API Registration Mod Revisited',
     
     'ACP_CAT_EVEAPI'                        => 'EVE API modules',
     'EVEAPI_CORPORATIONS'                   => 'Corporations',

@@ -18,7 +18,7 @@ class acp_eveapi_info
 		return array(
 			'filename'	=> 'acp_eveapi',
 			'title'		=> 'ACP_CAT_EVEAPI',
-			'version'	=> '6.3.1',
+			'version'	=> '7.0.6',
 			'modes'		=> array(
 				'general'			=> array('title' => 'GENERAL_SETTINGS', 	'auth' => 'acl_a_board', 'cat' => array('ACP_BOARD_CONFIGURATION')),
 				'corporation'		=> array('title' => 'EVEAPI_CORPORATIONS', 	'auth' => 'acl_a_board', 'cat' => array('ACP_BOARD_CONFIGURATION')),
