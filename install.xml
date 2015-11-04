@@ -25,7 +25,7 @@
 				<username phpbbcom="no">Cyerus</username>
 				<homepage>https://forums.eveonline.com/default.aspx?g=posts&amp;t=21281</homepage>
 				<contributions-group>
-					<contributions status="current" from="2010-07-10" position="Developer"/>
+					<contributions status="current" from="2010-07-10" position="Creator"/>
 				</contributions-group>
 			</author>
 		</author-group>
@@ -35,7 +35,7 @@
 		<installation>
 			<level>moderate</level>
 			<time>600</time>
-			<target-version>3.0.14</target-version>
+			<target-version>3.0.12</target-version>
 		</installation>
 
 		<history>
