@@ -3,7 +3,6 @@
 
 Cyerus brought us this mod and it's up to us to keep it running smoothly. Pull requests highly encouraged.
 
-Current Version 7.0.0
 
 Requirements
 -----------
