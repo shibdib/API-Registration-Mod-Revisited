@@ -1,0 +1,32 @@
+<!-- INCLUDE overall_header.html -->
+
+<div class="panel">
+	<div class="inner"><span class="corners-top"><span></span></span>
+
+	<div class="content">
+		<h2>EVE API for phpBB 3.x - CRONJOB</h2>
+		
+		<table class="table1" cellspacing="0">
+		<thead>
+		<tr>
+			<th style="font-size: 14px; color: #3f3f3f;" class="name">Timestamp</th>
+			<th style="font-size: 14px; color: #3f3f3f;" class="name">Charactername</th>
+			<th style="font-size: 14px; color: #3f3f3f;" class="name">Action</th>
+		</tr>
+		</thead>
+		<tbody>
+	<!-- BEGIN cronloop -->
+		<tr class="<!-- IF cronloop.S_ROW_COUNT is even -->bg1<!-- ELSE -->bg2<!-- ENDIF -->">
+			<td style="font-size: 12px;">{cronloop.TIMESTAMP}</td>
+			<td style="font-size: 12px;"><span>{cronloop.CHARACTER}</span></td>
+			<td style="font-size: 12px;"><span>{cronloop.ACTION}</span></td>
+		</tr>
+	<!-- END cronloop -->
+		</tbody>
+		</table>
+		
+	</div>
+	<span class="corners-bottom"><span></span></span></div>
+</div>
+
+<!-- INCLUDE overall_footer.html -->

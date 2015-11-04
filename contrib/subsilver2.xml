@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="modx.prosilver.en.xsl"?>
+<!--For security purposes, please check: http
+://www.phpbb.com/mods/ for the latest version of this MOD. Although MODs are checked before being allowed in the MODs Database there is no guarantee that there are no security problems within the MOD. No support will be given for MODs not found within the MODs Database which can be found at http://www.phpbb.com/mods/-->
+<mod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://www.phpbb.com/mods/xml/modx-1.2.6.xsd">
+	<header>
+		<license>http://opensource.org/licenses/gpl-license.php GNU General Public License v2</license>
+
+		<title lang="en">EVE API MOD by Cyerus</title>
+
+		<description lang="en">This file contains the instructions for the installation of the EVE API MOD for phpBB</description>
+
+		<author-notes lang="en"></author-notes>
+
+		<author-group>
+			<author>
+				<realname>Jordy Wille</realname>
+				<username phpbbcom="no">Cyerus</username>
+				<homepage>https://forums.eveonline.com/default.aspx?g=posts&amp;t=21281</homepage>
+				<contributions-group>
+					<contributions status="current" from="2010-07-10" position="Developer"/>
+				</contributions-group>
+			</author>
+		</author-group>
+
+		<mod-version>6.3.1</mod-version>
+
+		<installation>
+			<level>moderate</level>
+			<time>600</time>
+			<target-version>3.0.12</target-version>
+		</installation>
+
+		<link-group>
+			<link type="parent" lang="en" href="../install.xml">Main installation</link>
+		</link-group>
+	</header>
+
+	<action-group>
+		<copy>
+			<file from="root/styles/subsilver2/*.*" to="styles/subsilver2/*.*" />
+		</copy>
+
+		<open src="styles/subsilver2/template/login_body.html">
+			<edit>
+				<find><![CDATA[				<!-- IF U_RESEND_ACTIVATION and not S_ADMIN_AUTH --><br /><a class="gensmall" href="{U_RESEND_ACTIVATION}">{L_RESEND_ACTIVATION}</a><!-- ENDIF -->]]></find>
+				<action type="after-add"><![CDATA[				<!-- IF not S_EVEAPI_UPDATE and not S_ADMIN_AUTH --><br /><a href="eveapi_update.php">I would like to reactivate my account by providing new API information.</a><!-- ENDIF -->]]></action>
+			</edit>
+                        <edit>
+				<find><![CDATA[		<!-- IF S_DISPLAY_FULL_LOGIN -->]]></find>
+				<action type="replace-with"><![CDATA[		<!-- IF S_DISPLAY_FULL_LOGIN and not S_EVEAPI_UPDATE -->]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[				<td>&nbsp;</td>
+				<td><input type="checkbox" class="radio" name="viewonline" tabindex="4" /> <span class="gensmall">{L_HIDE_ME}</span></td>
+			</tr>
+		<!-- ENDIF -->]]></find>
+				<action type="after-add"><![CDATA[ 		<!-- IF S_EVEAPI_UPDATE -->
+                <tr>
+			<td>EVE API KeyId:</td>
+			<td><input type="text" tabindex="3" name="eveapi_keyid" id="eveapi_keyid" size="10" maxlength="25" value="" class="inputbox autowidth" title="EVE API KeyId" /></td>
+		</tr>
+		<tr>
+			<td>EVE API Verification Code:</dt>
+			<td><input type="text" tabindex="4" name="eveapi_vcode" id="eveapi_vcode" size="64" maxlength="64" value="" class="inputbox autowidth" title="EVE API Verification Code" /><input type="hidden" name="eveapi_update" value="yes" />
+			<br />Click <a href="https://support.eveonline.com/api/key/createpredefined/{EVEAPI_ACCESSMASK}" target="_blank">here</a> to create an API key with the correct permissions. Don't forget to set it as &#039;No Expiry&#039;!<br />It can sometimes take up to 15 minutes before the new API key is activated.</td>
+		</tr>
+        <!-- ENDIF --> ]]></action>
+			</edit>
+		</open>
+		<open src="styles/subsilver2/template/overall_footer.html">
+			<edit>
+				<find><![CDATA[	<span class="copyright">{CREDIT_LINE}]]></find>
+				<action type="replace-with"><![CDATA[	<span class="copyright">{CREDIT_LINE} &#166; Powered by <a href="https://forums.eveonline.com/default.aspx?g=posts&m=184934">EVE API v6.3.1 for phpBB 3.0.x</a> - <a href="#" onclick="CCPEVE.showInfo(1377, 1934722728)">Cyerus</a>]]></action>
+			</edit>
+		</open>
+		<open src="styles/subsilver2/template/overall_header.html">
+			<edit>
+				<find><![CDATA[<link rel="stylesheet" href="{T_STYLESHEET_LINK}" type="text/css" />]]></find>
+				<action type="after-add"><![CDATA[<link href="{T_SUPER_TEMPLATE_PATH}/eveapi_fitting.css" rel="stylesheet" type="text/css" />
+<script src="{T_SUPER_TEMPLATE_PATH}/eveapi_fitting.js" type="text/javascript"></script>
+<script type="text/javascript">
+	if (typeof CCPEVE != "undefined") {
+	  CCPEVE.requestTrust('{S_EVEAPI_TRUSTED}'); 
+	}
+</script>]]></action>
+			</edit>
+		</open>
+		<open src="styles/subsilver2/template/posting_buttons.html">
+			<edit>
+				<find><![CDATA[		var bbtags = new Array('[b]','[/b]','[i]','[/i]','[u]','[/u]','[quote]','[/quote]','[code]','[/code]','[list]','[/list]','[list=]','[/list]','[img]','[/img]','[url]','[/url]','[flash=]', '[/flash]','[size=]','[/size]'<!-- BEGIN custom_tags -->, {custom_tags.BBCODE_NAME}<!-- END custom_tags -->);]]></find>
+				<action type="after-add"><![CDATA[	var bbtags = new Array('[b]','[/b]','[i]','[/i]','[u]','[/u]','[quote]','[/quote]','[code]','[/code]','[list]','[/list]','[list=]','[/list]','[img]','[/img]','[url]','[/url]','[flash=]', '[/flash]','[size=]','[/size]', '[eveitem]', '[/eveitem]', '[evesystem]', '[/evesystem]', '[evefit]', '[/evefit]'<!-- BEGIN custom_tags -->, {custom_tags.BBCODE_NAME}<!-- END custom_tags -->);]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[		<!-- IF S_BBCODE_FLASH -->
+			<input type="button" class="btnbbcode" accesskey="d" name="addbbcode18" value="Flash" onclick="bbstyle(18)" onmouseover="helpline('d')" onmouseout="helpline('tip')" />
+		<!-- ENDIF -->]]></find>
+				<action type="after-add"><![CDATA[ 	<input type="button" class="btnbbcode" accesskey="eveitem" name="addbbcode22" value="EVE Item" onclick="bbstyle(22)" title="EVE Item" />
+	<input type="button" class="btnbbcode" accesskey="evesystem" name="addbbcode24" value="EVE System" onclick="bbstyle(24)" title="EVE System" />
+    <input type="button" class="btnbbcode" accesskey="evefit" name="addbbcode26" value="EVE Fitting" onclick="bbstyle(26)" title="EVE Fitting" />
+]]></action>
+			</edit>
+		</open>
+		<open src="styles/subsilver2/template/ucp_profile_avatar.html">
+			<edit>
+				<find><![CDATA[		<td class="row1" width="35%"><b class="genmed">{L_LINK_REMOTE_SIZE}: </b><br /><span class="gensmall">{L_LINK_REMOTE_SIZE_EXPLAIN}</span></td>
+		<td class="row2"><input class="post" type="text" name="width" size="3" value="{AVATAR_WIDTH}" /> <span class="gen">{L_PIXEL} &times; </span> <input class="post" type="text" name="height" size="3" value="{AVATAR_HEIGHT}" /> <span class="gen">{L_PIXEL}</span></td>
+	</tr>
+<!-- ENDIF -->]]></find>
+				<action type="after-add"><![CDATA[ 	<!-- IF S_EVEAPI_PORTRAIT -->
+		<tr>
+			<td class="row1" width="35%">EVE Portrait: <br /><span>Use your ingame Portrait as forum Avatar!</span></td>
+			<td class="row2"><input class="post" type="checkbox" name="eveapi_getPortrait" id="eveapi_getPortrait" /> Download Portrait</td>
+		</tr>
+	<!-- ENDIF --> ]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[<!-- IF S_DISPLAY_GALLERY or S_IN_AVATAR_GALLERY or S_LINK_AVATAR or S_UPLOAD_AVATAR_URL or S_UPLOAD_AVATAR_FILE or AVATAR -->]]></find>
+				<action type="replace-with"><![CDATA[<!-- IF S_DISPLAY_GALLERY or S_IN_AVATAR_GALLERY or S_LINK_AVATAR or S_UPLOAD_AVATAR_URL or S_UPLOAD_AVATAR_FILE or AVATAR or S_EVEAPI_PORTRAIT -->]]></action>
+			</edit>
+		</open>
+		<open src="styles/subsilver2/template/ucp_profile_reg_details.html">
+			<edit>
+				<find><![CDATA[<!-- IF S_CHANGE_PASSWORD -->
+	<tr>
+		<td class="row1" width="35%"><b class="genmed">{L_NEW_PASSWORD}: </b><br /><span class="gensmall">{L_CHANGE_PASSWORD_EXPLAIN}</span></td>
+		<td class="row2"><input type="password" class="post" name="new_password" size="30" maxlength="255" value="{NEW_PASSWORD}" /></td>
+	</tr>
+	<tr>
+		<td class="row1" width="35%"><b class="genmed">{L_CONFIRM_PASSWORD}: </b><br /><span class="gensmall">{L_CONFIRM_PASSWORD_EXPLAIN}</span></td>
+		<td class="row2"><input type="password" class="post" name="password_confirm" size="30" maxlength="255" value="{PASSWORD_CONFIRM}" /></td>
+	</tr>
+<!-- ENDIF -->]]></find>
+				<action type="after-add"><![CDATA[ 	<!-- IF S_EVEAPI_VALIDATE -->
+		<tr>
+			<td class="row1" width="35%"><b class="genmed">EVE API KeyId: </b></td>
+			<td class="row2"><input type="text" name="eveapi_keyid" id="eveapi_keyid" size="10" maxlength="15" value="{EVEAPI_KEYID}" class="post" title="EVE API KeyId" /></td>
+		</tr>
+		<tr>
+			<td class="row1" width="35%"><b class="genmed">EVE API Verification Code: </b></td>
+			<td class="row2"><input type="text" name="eveapi_vcode" id="eveapi_vcode" size="64" maxlength="64" value="{EVEAPI_VCODE}" class="post" title="EVE API Verification Code" /></td>
+		</tr>
+		<!-- IF S_EVEAPI_TS -->
+		<tr>
+			<td class="row1" width="35%"><b class="genmed">TeamSpeak UID: </b></td>
+			<td class="row2"><input type="text" name="eveapi_ts" id="eveapi_ts" size="30" maxlength="28" value="{EVEAPI_TS}" class="post" title="TeamSpeak UID" /></td>
+		</tr>
+		<!-- ENDIF -->
+	<!-- ENDIF --> ]]></action>
+			</edit>
+		</open>
+		<open src="styles/subsilver2/template/ucp_register.html">
+			<edit>
+				<find><![CDATA[<tr>
+	<td class="row1"><b class="genmed">{L_CONFIRM_PASSWORD}: </b></td>
+	<td class="row2"><input class="post" type="password" name="password_confirm" size="25" value="{PASSWORD_CONFIRM}" /></td>
+</tr>]]></find>
+				<action type="after-add"><![CDATA[ 	<!-- IF S_EVEAPI_VALIDATE -->
+	<tr>
+		<td class="row1"><b class="genmed">{L_EVEAPI_KEYID}: </b></td>
+		<td class="row2"><input type="text" tabindex="6" name="eveapi_keyid" id="eveapi_keyid" size="10" maxlength="15" value="{EVEAPI_KEYID}" class="post" title="{L_EVEAPI_KEYID}" /></dd>
+	</tr>
+	<tr>
+		<td class="row1"><b class="genmed">{L_EVEAPI_VCODE}: </b></td>
+		<td class="row2"><input type="text" tabindex="7" name="eveapi_vcode" id="eveapi_vcode" size="64" maxlength="64" value="{EVEAPI_VCODE}" class="post" title="{L_EVEAPI_VCODE}" /><
+		<br />Click <a href="https://support.eveonline.com/api/key/createpredefined/{L_EVEAPI_ACCESSMASK}" target="_blank">here</a> to create an API key with the correct permissions. Don't forget to set it as &#039;No Expiry&#039;!<br />It can sometimes take up to 15 minutes before the new API key is activated.</td>
+	</tr>
+	<!-- ENDIF --> ]]></action>
+			</edit>
+		</open>
+
+                <diy-instructions lang="en"><![CDATA[--------------------------------------------------------------------------------------------
+                
+        Browse to install/ and run the installer
+
+        Clear your cache in the "Administration Control Panel" (ACP) > "General" > "Purge the cache"
+
+        Refresh your Styles:
+        "Administration Control Panel" (ACP) > "Styles" > "Templates" > each > "refresh"
+        "Administration Control Panel" (ACP) > "Styles" > "Themes" > each > "refresh"
+        "Administration Control Panel" (ACP) > "Styles" > "Imagesets" > each > "refresh"
+        
+        --------------------------------------------------------------------------------------------]]></diy-instructions>
+
+	</action-group>
+</mod>

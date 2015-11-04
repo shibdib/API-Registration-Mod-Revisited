@@ -1,0 +1,6 @@
+%%
+%% Authentication using external script
+%% Make sure the script is executable by ejabberd.
+%%
+{auth_method, external}.
+{extauth_program, "/path/to/ejabberd_side.php"}.

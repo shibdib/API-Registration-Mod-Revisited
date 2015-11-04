@@ -1,0 +1,27 @@
+<!-- INCLUDE overall_header.html -->
+
+<table class="tablebg" cellspacing="1" width="100%">
+    <tr>
+        <th colspan="5"><h4>EVE API for phpBB 3.x - CRONJOB</h4></td>
+    </tr>
+    <tr>
+        <td colspan="1"><b class="genmed">Timestamp</b></td>
+        <td colspan="1"><b class="genmed">Charactername</b></td>
+        <td colspan="3"><b class="genmed">Action</b></td>
+    </tr>
+<!-- BEGIN cronloop -->
+    <tr>
+        <td class="row1" colspan="1">{cronloop.TIMESTAMP}</td>
+        <td class="row1" colspan="1">{cronloop.CHARACTER}</td>
+        <td class="row1" colspan="3">{cronloop.ACTION}</td>
+    </tr>
+<!-- END cronloop -->
+</table>
+
+<br clear="all" />
+
+<!-- INCLUDE breadcrumbs.html -->
+
+<br clear="all" />
+
+<!-- INCLUDE overall_footer.html -->

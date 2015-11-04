@@ -1,0 +1,1635 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="modx.prosilver.en.xsl"?>
+<!--For security purposes, please check: http://www.phpbb.com/mods/ for the latest version of this MOD. Although MODs are checked before being allowed in the MODs Database there is no guarantee that there are no security problems within the MOD. No support will be given for MODs not found within the MODs Database which can be found at http://www.phpbb.com/mods/-->
+<mod xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://www.phpbb.com/mods/xml/modx-1.2.6.xsd">
+	<header>
+		<license>http://opensource.org/licenses/gpl-license.php GNU General Public License v2</license>
+
+		<title lang="en">EVE API MOD Revisited by Mr Twinkie</title>
+
+		<description lang="en">This file contains the instructions for the installation of the EVE API MOD Revisited for phpBB 3.x</description>
+
+		<author-notes lang="en"></author-notes>
+
+		<author-group>
+			<author>
+				<realname>Bob Sardinia</realname>
+				<username phpbbcom="no">Mr Twinkie</username>
+				<homepage>https://forums.eveonline.com/default.aspx?g=posts&amp;t=21281</homepage>
+				<contributions-group>
+					<contributions status="current" from="2015-11-04" position="Developer"/>
+				</contributions-group>
+			</author>
+			<author>
+				<realname>Jordy Wille</realname>
+				<username phpbbcom="no">Cyerus</username>
+				<homepage>https://forums.eveonline.com/default.aspx?g=posts&amp;t=21281</homepage>
+				<contributions-group>
+					<contributions status="current" from="2010-07-10" position="Developer"/>
+				</contributions-group>
+			</author>
+		</author-group>
+
+		<mod-version>7.0.0</mod-version>
+
+		<installation>
+			<level>moderate</level>
+			<time>600</time>
+			<target-version>3.0.14</target-version>
+		</installation>
+
+		<history>
+			<entry>
+				<date>2015-11-04</date>
+				<rev-version>7.0.0</rev-version>
+				<changelog lang="en">
+					<change>Project officially taken over by Mr Twinkie (Shibdib) with the blessing of Cyreus.</change>
+					<change>API Links updated on new user registration and re-activation.</change>
+					<change>Database Updated to Parallax.</change>
+					<change>Primary phpBB version set to 3.0.14</change>
+					<change>Disabled part of the cron that de-activates accounts on errors as it caused a lot of false positives. (Working on a fix)</change>
+					<change>Mod renamed to represent change in primary developer.</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2014-02-23</date>
+				<rev-version>6.3.1</rev-version>
+				<changelog lang="en">
+					<change>Forum should now properly ask to be set trusted again when using the ingame browser.</change>
+					<change>AccessMasks should now properly be verified if AccessMask is set higher than default.</change>
+					<change>Made the api key link from eveapi_update listen to the AccessMask set in the ACP.</change>
+					<change>Updated the database to Rubicon 1.1.</change>
+					<change>Fully functioning OpenFire integration!</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2014-01-01</date>
+				<rev-version>6.3.0</rev-version>
+				<changelog lang="en">
+					<change>NOTE&#33; Remember to update your Special Group permissions in each of the Group settings screen, as the main Special Group checks from the EVE API General tab are now removed&#33;</change>
+					<change>Fix for Subsilver2 based templates; body belongs in overall_header, not in overall_footer</change>
+					<change>Faction Warfare integration should now work without errors again</change>
+					<change>Updated PHEAL to support the new way the EVE API handles its errors. It will return XML as body with HTTP statuscode on errors, after which PHEAL filters the errors and sends them back as PhealAPIException (in short: Back to semi-old method).</change>
+					<change>Updated the database to Rubicon 1.0.4.</change>
+					<change>Jabber authentication is now based on forum groups and EVE entities.</change>
+					<change>TeamSpeak groups are now able to be set by forum groups.</change>
+					<change>Improved TeamSpeak error handling. Users should now be able to see why their TS UID is not being saved.</change>
+					<change>Return of the Quick Reply on Prosilver themes.</change>
+					<change>Customizeble AccessMask using the ACP (new module).</change>
+					<change>Fix for &#039;TeamSpeak3 class not found&#039; fatal error, which happened under certain rare configurations.</change>
+					<change>Updated TeamSpeak3 PHP Framework to 1.1.23 from 1.1.18. (Requires TeamSpeak3 Server 3.0.9 or newer.)</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2013-08-18</date>
+				<rev-version>6.2.4</rev-version>
+				<changelog lang="en">
+					<change>NOTE&#33; Remember to update your Special Group permissions in each of the Group settings screen, as the main Special Group checks from the EVE API General tab will be removed shortly&#33;</change>
+					<change>The Groups-settings page has now been fixed to actually store the values (sorry about that!).</change>
+					<change>Updated the database to Odyssey 1.0.9. (Fuzzysteve's Odyssey 1.0.12 database dump seems to be corrupt, so using an older one instead.)</change>
+					<change>Split the installation script into different files to give my IDE a bit more breathing room.</change>
+					<change>The forum should now ask to be set as trusted when using the IGB. This is mainly done for the people having problems understanding they have to set the forum as trusted in order to use the navigation links. (When linking systems mainly, like setDestination())</change>
+					<change>Added basic TeamSpeak integration debugging to eveapi_check.php. Check that file for more information. (In order to see the page, you'll need to be logged in as admin.)</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2013-07-17</date>
+				<rev-version>6.2.3</rev-version>
+				<changelog lang="en">
+					<change>NOTE&#33; Remember to update your Special Group permissions in each of the Group settings screen, as the main Special Group checks from the EVE API General tab will be removed shortly&#33;</change>
+					<change>Fix for the annoying HTTP 403 bug caused by the recent API server update. I hate they changed it!</change>
+					<change>Small fixes for the ejabberd integration thanks to Yugo Reventlov.</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2013-03-27</date>
+				<rev-version>6.2.2</rev-version>
+				<changelog lang="en">
+					<change>NOTE&#33; Remember to update your Special Group permissions in each of the Group settings screen, as the main Special Group checks from the EVE API General tab will be removed shortly&#33;</change>
+					<change>Updated the database to Retribution 1.1.</change>
+					<change>TeamSpeak group management should once again correctly ignore group if set to 0.</change>
+					<change>Recoded the Jabber scripts (both forum and ejabberd side), resulting in less errors. Be aware that the logfile must be writeable!</change>
+					<change>Increase the amount of characters allowed between the EVE-based BBcodes.</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2013-02-08</date>
+				<rev-version>6.2.1</rev-version>
+				<changelog lang="en">
+					<change>NOTE&#33; Remember to update your Special Group permissions in each of the Group settings screen, as the main Special Group checks from the EVE API General tab will be removed shortly&#33;</change>
+                    <change>Fixed a small problem where the path to eveapi_fitting.css was wrong.</change>
+					<change>Removed the PHP extension Zip from eveapi_check.php as it is not needed.</change>
+                    <change>Removed the link to eveapi_update.php from the AdminCP login screen.</change>
+                    <change>Finally fixed the annoying Default group-bug that has been hunting me for over a year now..&#33;</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2013-01-18</date>
+				<rev-version>6.2.0</rev-version>
+				<changelog lang="en">
+					<change>Hopefully fixed a small bug where groups were not updated correctly if no default group has been selected.</change>
+					<change>Added ejabberd support to the main release, including a new (small) module for easy configuration.</change>
+					<change>Updated EVE stuff with Retribution 1.0.7 release.</change>
+					<change>Added initial configurable options in the Group-management screen. Even though the options don't do anything yet, the values are being stored for future implementation to give people the chance to already update to this new system.</change>
+					<change>Added initial Jabber option in each of the entities. Even though the option don't do anything yet, the values are being stored for future implementation to give people the chance to already update to this new system.</change>
+					<change>Added out-of-the-box support for Subsilver2 based themes. Even though I personally don't like the theme, I have to admit I like the way the cronjob screen looks like.</change>
+					<change>Updated the TeamSpeak 3 PHP framework to version 1.1.18 (requires TeamSpeak 3 Server of at least version 3.0.6.1).</change>
+					<change>Updated UMIL to version 1.0.5, mainly to avoid a few warnings about outdated UMIL in the AutoMOD screen.</change>
+					<change>Fixed EVE BBcode to ignore case when searching for items (including in fitting) and ships and systems, to avoid bugs like 'MicroWarpdrive' vs 'Microwarpdrive' in the future.</change>
+					<change>Slightly better TeamSpeak 3 error reporting; the cronjob now stops the script when no connection can be made to the TeamSpeak 3 server while TeamSpeak 3 integration is enabled. Cronjob will now also show the reason why, instead of throwing a PHP error.</change>
+					<change>Better validation for TeamSpeak 3 server nicknames. (Restricting values to Alpha-Numerical only.)</change>
+					<change>Fully automated installation (and module activation). Upload the zipfile to AutoMOD and it should place all the files in the correct places. The UMIL part (install/index.php) now takes care of automaticly activating the different modules.</change>
+					<change>Added root/eveapi_check.php to let you verify whether or not your webhost has the required PHP-version, extensions and mods enabled and running. This file requires you to be logged in as an admin, so if you see a white page be sure to log into the admin control panel first before browsing back to this script (security reasons).</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2012-12-05</date>
+				<rev-version>6.1.2</rev-version>
+				<changelog lang="en">
+					<change>Fixed a small bug resulting in error messages when no TeamSpeak group were assigned to users.</change>
+					<change>More logical validation on accessMasks, mainly allowing users to register if they haven't selected FacWarStats when FW isn't enabled on forum, and allow for Private - CharacterInfo aswell.</change>
+					<change>Added API creation hyperlink to the register page.</change>
+					<change>Added hyperlink to loginpage to allow for fast browsing to eveapi_update.php page.</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2012-10-08</date>
+				<rev-version>6.1.1</rev-version>
+				<changelog lang="en">
+					<change>Improved error-handling to avoid disabled accounts caused by connection issues.</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2012-10-08</date>
+				<rev-version>6.1.0</rev-version>
+				<changelog lang="en">
+					<change>Support for phpBB 3.0.11</change>
+					<change>eveapi_update.php will now correctly save the now API information.</change>
+					<change>EVE based BBcodes should now correctly work if the mod is installed but the masterswitch have been disabled.</change>
+					<change>Switched to SSL for https://api.eveonline.com</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2012-07-07</date>
+				<rev-version>6.0.3</rev-version>
+				<changelog lang="en">
+					<change>Fixed a bug where users could not create a forum account while the mod is installed but disabled.</change>
+					<change>Hopefully fixed a bug causing a MySQL error.</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2012-07-01</date>
+				<rev-version>6.0.2</rev-version>
+				<changelog lang="en">
+					<change>Added the AdminCP ability to set the amount of corporations, alliances and special groups shown in the modules. (Be sure to reload all the modules!)</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2012-06-30</date>
+				<rev-version>6.0.1</rev-version>
+				<changelog lang="en">
+					<change>Fixed a small database import bug. (No more errors because of \x96 Auth, hopefully)</change>
+					<change>Fixed a small issue of users unable to update their API details.</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2012-06-29</date>
+				<rev-version>6.0.0</rev-version>
+				<changelog lang="en">
+					<change>Full support for AutoMOD and Umil.</change>
+				</changelog>
+			</entry>
+		</history>
+
+		<link-group>
+			<link type="template" lang="en" href="contrib/subsilver2.xml">Edits meant for subsilver2 style</link>
+		</link-group>
+	</header>
+
+	<action-group>
+		<copy>
+			<file from="root/images/*.*" to="images/*.*" />
+			<file from="root/includes/*.*" to="includes/*.*" />
+			<file from="root/install/*.*" to="install/*.*" />
+			<file from="root/language/*.*" to="language/*.*" />
+			<file from="root/styles/prosilver/*.*" to="styles/prosilver/*.*" />
+			<file from="root/umil/*.*" to="umil/*.*" />
+			<file from="root/xmlrpc/*.*" to="xmlrpc/*.*" />
+			<file from="root/eveapi_cron.php" to="eveapi_cron.php" />
+			<file from="root/eveapi_update.php" to="eveapi_update.php" />
+			<file from="root/eveapi_check.php" to="eveapi_check.php" />
+		</copy>
+
+		<open src="adm/style/acp_groups.html">
+			<edit>
+				<find><![CDATA[	<dl>
+		<dt><label for="group_rank">{L_GROUP_RANK}:</label></dt>
+		<dd><select name="group_rank" id="group_rank">{S_RANK_OPTIONS}</select></dd>
+	</dl>
+	</fieldset>]]></find>
+				<action type="after-add"><![CDATA[	<!-- IF S_EVEAPI_VALIDATION -->
+        <fieldset>
+		<legend>EVE API settings</legend>
+	<dl>
+		<dt><label for="group_eveapi_special">Immunity:</label><br /><span>Is this group immune for API-checks?</span></dt>
+		<dd><input name="group_eveapi_special" type="checkbox" value="1" class="radio" id="group_eveapi_special"{GROUP_EVEAPI_SPECIAL} /></dd>
+	</dl>
+	<dl>
+		<dt><label for="group_eveapi_ts3">TeamSpeak 3:</label><br /><span>Enable integration of this TeamSpeak 3 group when an user is part of this forumgroup.</span></dt>
+		<dd><input name="group_eveapi_ts3" type="text" id="group_eveapi_ts3" maxlength="4" size="4" value="{GROUP_EVEAPI_TS3}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="group_eveapi_jabber">Jabber:</label><br /><span>Enable ejabberd access for users part of this forumgroup.</span></dt>
+		<dd><input name="group_eveapi_jabber" type="checkbox" value="1" class="radio" id="group_eveapi_jabber"{GROUP_EVEAPI_JABBER} /></dd>
+	</dl>
+	<dl>
+		<dt><label for="group_eveapi_openfire">OpenFire:</label><br /><span>Set OpenFire group for users part of this forumgroup.</span></dt>
+		<dd><input name="group_eveapi_openfire" type="text" id="group_eveapi_openfire" maxlength="20" size="20" value="{GROUP_EVEAPI_OPENFIRE}" /></dd>
+	</dl>
+	</fieldset>
+        <!-- ENDIF -->]]></action>
+			</edit>
+		</open>
+                <open src="adm/style/acp_users_avatar.html">
+			<edit>
+				<find><![CDATA[			<dl>
+				<dt><label for="width">{L_LINK_REMOTE_SIZE}:</label><br /><span>{L_LINK_REMOTE_SIZE_EXPLAIN}</span></dt>
+				<dd><input name="width" type="text" id="width" size="3" value="{USER_AVATAR_WIDTH}" /> <span>{L_PIXEL} &times; </span> <input type="text" name="height" size="3" value="{USER_AVATAR_HEIGHT}" /> <span>{L_PIXEL}</span></dd>
+			</dl>
+		<!-- ENDIF -->]]></find>
+				<action type="after-add"><![CDATA[		<!-- IF S_EVEAPI_PORTRAIT -->
+				<dl>
+						<dt><label for="eveapi_downloadportrait">EVE Portrait: </label><br /><span>Download and use your EVE Portrait as forum avatar!</span></dt>
+						<dd><input type="checkbox" name="eveapi_getPortrait" id="eveapi_getPortrait" /> Download portrait</dd>
+				</dl>
+		<!-- ENDIF -->]]></action>
+			</edit>
+		</open>
+		<open src="adm/style/acp_users_overview.html">
+			<edit>
+				<find><![CDATA[<dl>
+	<dt><label for="password_confirm">{L_CONFIRM_PASSWORD}:</label><br /><span>{L_CONFIRM_PASSWORD_EXPLAIN}</span></dt>
+	<dd><input type="password" id="password_confirm" name="password_confirm" value="" autocomplete="off" /></dd>
+</dl>]]></find>
+				<action type="after-add"><![CDATA[<!-- IF S_EVEAPI_VALIDATE -->
+<dl>
+        <dt><label for="eveapi_keyid">EVE API KeyId:</label></dt>
+        <dd><input type="text" name="eveapi_keyid" id="eveapi_keyid" size="10" maxlength="15" value="{EVEAPI_KEYID}"  /></dd>
+</dl>
+<dl>
+        <dt><label for="eveapi_vcode">EVE API Verification Code:</label></dt>
+        <dd><input type="text" name="eveapi_vcode" id="eveapi_vcode" size="64" maxlength="64" value="{EVEAPI_VCODE}" /></dd>
+</dl>
+<dl>
+        <dt><label for="eveapi_ts">TeamSpeak UID:</label></dt>
+        <dd><input type="text" name="eveapi_ts" id="eveapi_ts" size="30" maxlength="28" value="{EVEAPI_TS}" /></dd>
+</dl>
+<!-- ENDIF --> ]]></action>
+			</edit>
+		</open>
+		<open src="includes/acp/acp_groups.php">
+			<edit>
+				<find><![CDATA[					$submit_ary = array(
+						'colour'			=> request_var('group_colour', ''),
+						'rank'				=> request_var('group_rank', 0),
+						'receive_pm'		=> isset($_REQUEST['group_receive_pm']) ? 1 : 0,
+						'legend'			=> isset($_REQUEST['group_legend']) ? 1 : 0,
+						'message_limit'		=> request_var('group_message_limit', 0),
+						'max_recipients'	=> request_var('group_max_recipients', 0),
+						'founder_manage'	=> 0,
+						'skip_auth'			=> request_var('group_skip_auth', 0),
+					);]]></find>
+				<action type="after-add"><![CDATA[                                        if($config['eveapi_validation'])
+                                        {
+                                            $submit_ary = array_merge($submit_ary, array(
+                                                'eveapi_special'	=>  request_var('group_eveapi_special', 0),
+                                                'eveapi_ts3'		=>  request_var('group_eveapi_ts3', 0),
+                                                'eveapi_jabber'		=>  isset($_REQUEST['group_eveapi_jabber']) ? 1 : 0,
+                                                'eveapi_openfire'	=>  request_var('group_eveapi_openfire', ''),
+                                            ));
+                                        }]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[						$test_variables = array(
+							'rank'			=> 'int',
+							'colour'		=> 'string',
+							'avatar'		=> 'string',
+							'avatar_type'	=> 'int',
+							'avatar_width'	=> 'int',
+							'avatar_height'	=> 'int',
+							'receive_pm'	=> 'int',
+							'legend'		=> 'int',
+							'message_limit'	=> 'int',
+							'max_recipients'=> 'int',
+							'founder_manage'=> 'int',
+							'skip_auth'		=> 'int',
+						);]]></find>
+				<action type="after-add"><![CDATA[                                                if($config['eveapi_validation'])
+                                                {
+                                                    $test_variables = array_merge($test_variables, array(
+                                                        'eveapi_special'	=>  'int',
+                                                        'eveapi_ts3'		=>  'int',
+                                                        'eveapi_jabber'		=>  'int',
+                                                        'eveapi_openfire'	=>  'string',					
+                                                    ));
+                                                }]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[					'GROUP_COLOUR'			=> (isset($group_row['group_colour'])) ? $group_row['group_colour'] : '',
+					'GROUP_SKIP_AUTH'		=> (!empty($group_row['group_skip_auth'])) ? ' checked="checked"' : '',
+]]></find>
+				<action type="after-add"><![CDATA[					'GROUP_EVEAPI_SPECIAL'  => (isset($group_row['group_eveapi_special']) && $group_row['group_eveapi_special']) ? ' checked="checked"' : '',
+					'GROUP_EVEAPI_TS3'      => (isset($group_row['group_eveapi_ts3'])) ? $group_row['group_eveapi_ts3'] : 0,
+					'GROUP_EVEAPI_JABBER'   => (isset($group_row['group_eveapi_jabber']) && $group_row['group_eveapi_jabber']) ? ' checked="checked"' : '',
+					'GROUP_EVEAPI_OPENFIRE' => (isset($group_row['group_eveapi_openfire'])) ? $group_row['group_eveapi_openfire'] : "",
+					'S_EVEAPI_VALIDATION'   => $config['eveapi_validation'],
+]]></action>
+			</edit>
+		</open>
+		<open src="includes/acp/acp_users.php">
+			<edit>
+				<find><![CDATA[					// Handle registration info updates
+					$data = array(
+						'username'			=> utf8_normalize_nfc(request_var('user', $user_row['username'], true)),
+						'user_founder'		=> request_var('user_founder', ($user_row['user_type'] == USER_FOUNDER) ? 1 : 0),
+						'email'				=> strtolower(request_var('user_email', $user_row['user_email'])),
+						'email_confirm'		=> strtolower(request_var('email_confirm', '')),
+						'new_password'		=> request_var('new_password', '', true),
+						'password_confirm'	=> request_var('password_confirm', '', true),
+					);]]></find>
+				<action type="after-add"><![CDATA[					if ($config['eveapi_validation'])
+					{
+						$data = array_merge($data, array(
+							'eveapi_keyid'	=> request_var('eveapi_keyid', '', true),
+							'eveapi_vcode'	=> request_var('eveapi_vcode', '', true),
+							'eveapi_ts'	=> request_var('eveapi_ts', '', true),
+						));
+					}]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[					// Validation data - we do not check the password complexity setting here
+					$check_ary = array(
+						'new_password'		=> array(
+							array('string', true, $config['min_pass_chars'], $config['max_pass_chars']),
+							array('password')),
+						'password_confirm'	=> array('string', true, $config['min_pass_chars'], $config['max_pass_chars']),
+					);]]></find>
+				<action type="after-add"><![CDATA[					if ($config['eveapi_validation'])
+					{
+						$check_ary = array_merge($check_ary, array(
+							'eveapi_keyid'	=> array(
+								array('string', false, 1, 15),
+							),
+							'eveapi_vcode'	=> array(
+								array('string', false, 64, 64),
+							),
+							'eveapi_ts'	=> array(
+								array('string', false, 0, 28),
+							),
+						));
+					}]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[					if (!check_form_key($form_name))
+					{
+						$error[] = 'FORM_INVALID';
+					}]]></find>
+				<action type="after-add"><![CDATA[					if ($config['eveapi_validation'])
+					{
+						$eveapi_teamSpeakGroups = array();
+						$characterInfo = eveapi_checkThisCharacter($data['eveapi_keyid'], $data['eveapi_vcode'], $data['username']);
+						if(empty($characterInfo["error"]))
+						{
+							if(!empty($characterInfo["forumGroups"]) || (empty($characterInfo["forumGroups"]) && $config['eveapi_nonmember']))
+							{
+								$eveapi_teamSpeakGroups = $characterInfo["TSGroups"];
+								$eveapi_forumGroups = $characterInfo["forumGroups"];
+								$extraGroups = eveapi_setForumGroups($user_id, $eveapi_forumGroups, $data['username']);
+					
+								if($config['eveapi_jabber_masterswitch'])
+								{
+									if($config['eveapi_ejabber_switch'])
+									{
+										eveapi_setJabberAccess($user_id, $characterInfo['jabber'], $extraGroups['jabber'], $data['username']);
+									}
+
+									if($config['eveapi_openfire_switch'])
+									{
+										eveapi_setOpenFireAccess($user_id, $characterInfo['openfire'], $extraGroups['openfire'], $data['username']);
+									}
+								}
+							}
+							else
+							{
+								$error[] = 'This character is not permitted to have an account on this forum.';
+							}
+						}
+						else
+						{
+							$error = array_merge($error, $characterInfo["error"]);
+						}
+					} ]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[					// Which updates do we need to do?
+					$update_username = ($user_row['username'] != $data['username']) ? $data['username'] : false;
+					$update_password = ($data['new_password'] && !phpbb_check_hash($data['new_password'], $user_row['user_password'])) ? true : false;
+					$update_email = ($data['email'] != $user_row['user_email']) ? $data['email'] : false;
+]]></find>
+				<action type="after-add"><![CDATA[					$update_keyId = ($data['eveapi_keyid'] != $user_row['eveapi_keyid']) ? $data['eveapi_keyid'] : false;
+					$update_vCode = ($data['eveapi_vcode'] != $user_row['eveapi_vcode']) ? $data['eveapi_vcode'] : false;
+]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[						if ($update_password)
+						{
+							$sql_ary += array(
+								'user_password'		=> phpbb_hash($data['new_password']),
+								'user_passchg'		=> time(),
+								'user_pass_convert'	=> 0,
+							);
+
+							$user->reset_login_keys($user_id);
+							add_log('user', $user_id, 'LOG_USER_NEW_PASSWORD', $user_row['username']);
+						}]]></find>
+				<action type="after-add"><![CDATA[						if ($config['eveapi_validation'] && $update_keyId && $update_vCode)
+						{
+							$sql_ary += array(
+								'eveapi_keyid'  => $update_keyId,
+								'eveapi_vcode'  => $update_vCode,
+							);
+							
+							add_log('user', $user_id, 'User has updated his/her EVE API information.', $user_row['username'], $data['eveapi_keyid'] . " -> " . $data['eveapi_vcode']);
+						}
+						
+						if($config['eveapi_ts_masterswitch'] && $config['eveapi_validation'])
+						{
+							$sql_ary += array('eveapi_ts'  => $data['eveapi_ts'], );
+							
+							if($data['eveapi_ts'] != $user_row['eveapi_ts'] && !empty($user_row['eveapi_ts']))
+							{
+								eveapi_setTeamSpeakGroups($user_row['eveapi_ts'], array(), $data['username']);
+								add_log('user', $user_id, 'User has updated his/her TeamSpeak UID.', $user_row['username'], $data['eveapi_ts']);
+							}
+
+							if($data['eveapi_ts'])
+							{
+								$TSverify = eveapi_setTeamSpeakGroups($data['eveapi_ts'], $eveapi_teamSpeakGroups, $data['username'], false, $extraGroups["TS"]);
+								if($TSverify !== true)
+								{
+									$error[] = $TSverify;
+									$sql_ary['eveapi_ts'] = "";
+								}
+							}
+						}]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[						case INACTIVE_REMIND:
+							$inactive_reason = $user->lang['INACTIVE_REASON_REMIND'];
+						break;]]></find>
+				<action type="after-add"><![CDATA[						case INACTIVE_EVEAPI_INVALID:
+								$row['inactive_reason'] = "Invalid EVE API key.";
+						break;
+
+						case INACTIVE_EVEAPI_NONMEMBER:
+								$row['inactive_reason'] = "With the current configuration, the user is not allowed to have an account.";
+						break;]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[					'USER_WARNINGS'		=> $user_row['user_warnings'],
+					'USER_POSTS'		=> $user_row['user_posts'],
+					'USER_HAS_POSTS'	=> $user_row['user_has_posts'],
+					'USER_INACTIVE_REASON'	=> $inactive_reason,]]></find>
+				<action type="after-add"><![CDATA[					'S_EVEAPI_VALIDATE'     => ($config['eveapi_validation']) ? true : false,
+					'EVEAPI_KEYID'		=> $user_row['eveapi_keyid'],
+					'EVEAPI_VCODE'          => $user_row['eveapi_vcode'],
+					'EVEAPI_TS'             => $user_row['eveapi_ts'], ]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[				else if ((($user_row['user_avatar_type'] == AVATAR_UPLOAD) && !$config['allow_avatar_upload']) || ]]></find>
+				<action type="replace-with"><![CDATA[				else if ((($user_row['user_avatar_type'] == AVATAR_UPLOAD) && !$config['allow_avatar_upload'] && !$config['eveapi_portrait']) || 
+]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[					'S_DISPLAY_GALLERY'	=> ($config['allow_avatar'] && $config['allow_avatar_local'] && !$display_gallery) ? true : false,
+					'S_IN_GALLERY'		=> ($config['allow_avatar'] && $config['allow_avatar_local'] && $display_gallery) ? true : false,
+]]></find>
+				<action type="after-add"><![CDATA[					'S_EVEAPI_PORTRAIT'	=> ($config['allow_avatar'] && $config['eveapi_portrait'] && $config['eveapi_validation']) ? true : false,
+]]></action>
+			</edit>
+		</open>
+		<open src="includes/ucp/info/ucp_profile.php">
+			<edit>
+				<find><![CDATA[				'avatar'		=> array('title' => 'UCP_PROFILE_AVATAR', 'auth' => 'cfg_allow_avatar && (cfg_allow_avatar_local || cfg_allow_avatar_remote || cfg_allow_avatar_upload || cfg_allow_avatar_remote_upload)', 'cat' => array('UCP_PROFILE')), ]]></find>
+				<action type="replace-with"><![CDATA[				'avatar'		=> array('title' => 'UCP_PROFILE_AVATAR', 'auth' => 'cfg_allow_avatar && (cfg_allow_avatar_local || cfg_allow_avatar_remote || cfg_allow_avatar_upload || cfg_allow_avatar_remote_upload || cfg_eveapi_portrait)', 'cat' => array('UCP_PROFILE')),
+]]></action>
+			</edit>
+		</open>
+		<open src="includes/ucp/ucp_profile.php">
+			<edit>
+				<find><![CDATA[				$data = array(
+					'username'			=> utf8_normalize_nfc(request_var('username', $user->data['username'], true)),
+					'email'				=> strtolower(request_var('email', $user->data['user_email'])),
+					'email_confirm'		=> strtolower(request_var('email_confirm', '')),
+					'new_password'		=> request_var('new_password', '', true),
+					'cur_password'		=> request_var('cur_password', '', true),
+					'password_confirm'	=> request_var('password_confirm', '', true),
+				);]]></find>
+				<action type="after-add"><![CDATA[				if ($config['eveapi_validation'])
+				{
+					$data = array_merge($data,array(
+						'eveapi_keyid'	=> request_var('eveapi_keyid', $user->data['eveapi_keyid'], true),
+						'eveapi_vcode'	=> request_var('eveapi_vcode', $user->data['eveapi_vcode'], true),
+						'eveapi_ts'	=> request_var('eveapi_ts', $user->data['eveapi_ts'], true),
+					));
+				} ]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[					if ($auth->acl_get('u_chgname') && $config['allow_namechange'])
+					{
+						$check_ary['username'] = array(
+							array('string', false, $config['min_name_chars'], $config['max_name_chars']),
+							array('username'),
+						);
+					}]]></find>
+				<action type="after-add"><![CDATA[					if ($config['eveapi_validation'])
+					{
+						$check_ary = array_merge($check_ary,array(
+							'eveapi_keyid'		=> array(
+								array('string', false, 1, 15),
+							),
+							'eveapi_vcode'	=> array(
+								array('string', false, 64, 64),
+							),
+							'eveapi_ts'	=> array(
+								array('string', false, 0, 28),
+							),
+						));
+					} ]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[					if (!check_form_key('ucp_reg_details'))
+					{
+						$error[] = 'FORM_INVALID';
+					}]]></find>
+				<action type="after-add"><![CDATA[					if (!sizeof($error) && $config['eveapi_validation'])
+					{
+						$eveapi_teamSpeakGroups = array();
+						$characterInfo = eveapi_checkThisCharacter($data['eveapi_keyid'], $data['eveapi_vcode'], $data['username']);
+						if(empty($characterInfo["error"]))
+						{
+							if(!empty($characterInfo["forumGroups"]) || (empty($characterInfo["forumGroups"]) && $config['eveapi_nonmember']))
+							{
+								$eveapi_forumGroups = $characterInfo["forumGroups"];
+								$eveapi_teamSpeakGroups = $characterInfo["TSGroups"];
+								$extraGroups = eveapi_setForumGroups($user->data['user_id'], $eveapi_forumGroups, $data['username']);
+					
+								if($config['eveapi_jabber_masterswitch'])
+								{
+									if($config['eveapi_ejabber_switch'])
+									{
+										eveapi_setJabberAccess($user->data['user_id'], $characterInfo['jabber'], $extraGroups['jabber'], $data['username']);
+									}
+
+									if($config['eveapi_openfire_switch'])
+									{
+										eveapi_setOpenFireAccess($user->data['user_id'], $characterInfo['openfire'], $extraGroups['openfire'], $data['username']);
+									}
+								}
+							}
+							else
+							{
+								$error[] = 'This character is not permitted to have an account on this forum.';
+							}
+						}
+						else
+						{
+							$error = array_merge($error, $characterInfo["error"]);
+						}
+					} ]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[						$sql_ary = array(
+							'username'			=> ($auth->acl_get('u_chgname') && $config['allow_namechange']) ? $data['username'] : $user->data['username'],
+							'username_clean'	=> ($auth->acl_get('u_chgname') && $config['allow_namechange']) ? utf8_clean_string($data['username']) : $user->data['username_clean'],
+							'user_email'		=> ($auth->acl_get('u_chgemail')) ? $data['email'] : $user->data['user_email'],
+							'user_email_hash'	=> ($auth->acl_get('u_chgemail')) ? phpbb_email_hash($data['email']) : $user->data['user_email_hash'],
+							'user_password'		=> ($auth->acl_get('u_chgpasswd') && $data['new_password']) ? phpbb_hash($data['new_password']) : $user->data['user_password'],
+							'user_passchg'		=> ($auth->acl_get('u_chgpasswd') && $data['new_password']) ? time() : 0,
+						);]]></find>
+				<action type="after-add"><![CDATA[						if ($config['eveapi_validation'])
+						{
+							$sql_ary = array_merge($sql_ary,array(
+								'eveapi_keyid'	=> $data['eveapi_keyid'],
+								'eveapi_vcode'	=> $data['eveapi_vcode'],
+								'eveapi_ts'         => $data['eveapi_ts'],
+							));
+						} ]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[						if ($auth->acl_get('u_chgemail') && $data['email'] != $user->data['user_email'])
+						{
+							add_log('user', $user->data['user_id'], 'LOG_USER_UPDATE_EMAIL', $data['username'], $user->data['user_email'], $data['email']);
+						}]]></find>
+				<action type="after-add"><![CDATA[						if ($config['eveapi_validation'])
+						{
+							if ($data['eveapi_keyid'] != $user->data['eveapi_keyid'] || $data['eveapi_vcode'] != $user->data['eveapi_vcode'])
+							{
+									add_log('user', $user->data['user_id'], 'User has updated his/her EVE API information.', $data['username'], $data['eveapi_keyid'] . " -> " . $data['eveapi_vcode']);
+							}
+
+							if($config['eveapi_ts_masterswitch'])
+							{
+								// Remove old 
+								if($data['eveapi_ts'] != $user->data['eveapi_ts'] && !empty($user->data['eveapi_ts']))
+								{
+									eveapi_setTeamSpeakGroups($user->data['eveapi_ts'], array(), $data['username']);
+								}
+
+								if($data['eveapi_ts'] != "")
+								{
+									$TSverify = eveapi_setTeamSpeakGroups($data['eveapi_ts'], $eveapi_teamSpeakGroups, $data['username'], false, $extraGroups["TS"]);
+									if($TSverify !== true)
+									{
+										$error[] = $TSverify;
+										$sql_ary['eveapi_ts'] = "";
+									}
+								}
+							}
+						}]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[					'ERROR'				=> (sizeof($error)) ? implode('<br />', $error) : '',
+
+					'USERNAME'			=> $data['username'],
+					'EMAIL'				=> $data['email'],
+					'PASSWORD_CONFIRM'	=> $data['password_confirm'],
+					'NEW_PASSWORD'		=> $data['new_password'],
+					'CUR_PASSWORD'		=> '',]]></find>
+				<action type="after-add"><![CDATA[					'EVEAPI_KEYID'      => $data['eveapi_keyid'],
+					'EVEAPI_VCODE'      => $data['eveapi_vcode'],
+					'EVEAPI_TS'         => $data['eveapi_ts'],
+					'S_EVEAPI_VALIDATE' => ($config['eveapi_validation']) ? true : false,
+					'S_EVEAPI_TS'       => ($config['eveapi_ts_masterswitch']) ? true : false, ]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[				else if ((($user->data['user_avatar_type'] == AVATAR_UPLOAD) && !$config['allow_avatar_upload']) || ]]></find>
+				<action type="replace-with"><![CDATA[				else if ((($user->data['user_avatar_type'] == AVATAR_UPLOAD) && !$config['allow_avatar_upload'] && !$config['eveapi_portrait']) || 
+]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[					$avatars_enabled = (($can_upload && ($config['allow_avatar_upload'] || $config['allow_avatar_remote_upload'])) || ($auth->acl_get('u_chgavatar') && ($config['allow_avatar_local'] || $config['allow_avatar_remote']))) ? true : false; ]]></find>
+				<action type="replace-with"><![CDATA[					$avatars_enabled = (($can_upload && ($config['allow_avatar_upload'] || $config['allow_avatar_remote_upload'] || $config['eveapi_portrait'])) || ($auth->acl_get('u_chgavatar') && ($config['allow_avatar_local'] || $config['allow_avatar_remote']))) ? true : false;
+]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[ 						'S_DISPLAY_GALLERY'		=> ($auth->acl_get('u_chgavatar') && $config['allow_avatar_local']) ? true : false) ]]></find>
+				<action type="replace-with"><![CDATA[ 						'S_DISPLAY_GALLERY'		=> ($auth->acl_get('u_chgavatar') && $config['allow_avatar_local']) ? true : false,
+						
+                        'S_EVEAPI_PORTRAIT'	=> ($auth->acl_get('u_chgavatar') && $config['eveapi_portrait'] && $config['eveapi_validation']) ? true : false) ]]></action>
+			</edit>
+		</open>
+		<open src="includes/ucp/ucp_register.php">
+			<edit>
+				<find><![CDATA[		$data = array(
+			'username'			=> utf8_normalize_nfc(request_var('username', '', true)),
+			'new_password'		=> request_var('new_password', '', true),
+			'password_confirm'	=> request_var('password_confirm', '', true),
+			'email'				=> strtolower(request_var('email', '')),
+			'email_confirm'		=> strtolower(request_var('email_confirm', '')),
+			'lang'				=> basename(request_var('lang', $user->lang_name)),
+			'tz'				=> request_var('tz', (float) $timezone),
+		);]]></find>
+				<action type="after-add"><![CDATA[		if ($config['eveapi_validation'])
+		{
+			$data = array_merge($data, array(
+				'eveapi_keyid'	=> request_var('eveapi_keyid', '', true),
+				'eveapi_vcode'	=> request_var('eveapi_vcode', '', true),
+			));
+		} ]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[			$error = validate_data($data, array(
+				'username'			=> array(
+					array('string', false, $config['min_name_chars'], $config['max_name_chars']),
+					array('username', '')),
+				'new_password'		=> array(
+					array('string', false, $config['min_pass_chars'], $config['max_pass_chars']),
+					array('password')),
+				'password_confirm'	=> array('string', false, $config['min_pass_chars'], $config['max_pass_chars']),
+				'email'				=> array(
+					array('string', false, 6, 60),
+					array('email')),
+				'email_confirm'		=> array('string', false, 6, 60),
+				'tz'				=> array('num', false, -14, 14),
+				'lang'				=> array('language_iso_name'),
+			));]]></find>
+				<action type="after-add"><![CDATA[			if ($config['eveapi_validation'])
+			{
+				$error = array_merge($error,validate_data($data, array(
+					'eveapi_keyid'		=> array(
+						array('string', false, 1, 15)
+					),
+					'eveapi_vcode'	=> array(
+						array('string', false, 64, 64),
+					),
+				)));
+			} ]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[			if (!sizeof($error))
+			{
+				if ($data['new_password'] != $data['password_confirm'])
+				{
+					$error[] = $user->lang['NEW_PASSWORD_ERROR'];
+				}
+
+				if ($data['email'] != $data['email_confirm'])
+				{
+					$error[] = $user->lang['NEW_EMAIL_ERROR'];
+				}
+			}]]></find>
+				<action type="after-add"><![CDATA[			if (!sizeof($error) && $config['eveapi_validation'])
+			{
+				$characterInfo = eveapi_checkThisCharacter($data['eveapi_keyid'], $data['eveapi_vcode'], $data['username']);
+				if(empty($characterInfo["error"]))
+				{
+					if(!empty($characterInfo["forumGroups"]) || (empty($characterInfo["forumGroups"]) && $config['eveapi_nonmember']))
+					{
+						$eveapi_forumGroups = $characterInfo["forumGroups"];
+					}
+					else
+					{
+						$error[] = 'This character is not permitted to have an account on this forum.';
+					}
+				}
+				else
+				{
+					$error = array_merge($error, $characterInfo["error"]);
+				}
+			} ]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[				if ($config['new_member_post_limit'])
+				{
+					$user_row['user_new'] = 1;
+				}]]></find>
+				<action type="after-add"><![CDATA[				if ($config['eveapi_validation'])
+				{
+					$user_row = array_merge($user_row, array(
+						'eveapi_keyid'  => $data['eveapi_keyid'],
+						'eveapi_vcode'  => $data['eveapi_vcode'],
+					));
+				} ]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[				// This should not happen, because the required variables are listed above...
+				if ($user_id === false)
+				{
+					trigger_error('NO_USER', E_USER_ERROR);
+				}]]></find>
+				<action type="after-add"><![CDATA[				if($config['eveapi_validation'])
+                                {
+                                    // EVE API - Add the correct groups to the user.
+                                    eveapi_setForumGroups($user_id, $eveapi_forumGroups);
+
+                                    // EVE API - Set characters in-game portrait as Avatar
+                                    if($config['eveapi_portrait'])
+                                    {
+                                        $eveapi_characterID = eveapi_getCharacterID($user_row["username"]);
+                                        if($eveapi_characterID)
+                                        {
+                                            $eveapi_portrait = eveapi_getPortrait($eveapi_characterID, $user_id);
+                                            if($eveapi_portrait)
+                                            {
+                                                $sql = 'UPDATE ' . USERS_TABLE . "
+                                                        SET user_avatar = '" . $eveapi_portrait . "',
+                                                        user_avatar_type = " . AVATAR_UPLOAD . ",
+                                                        user_avatar_width = " . $config['eveapi_portrait_size'] . ",
+                                                        user_avatar_height = " . $config['eveapi_portrait_size'] . "
+                                                        WHERE user_id = " . $user_id;
+                                                $result = $db->sql_query($sql);
+                                                $db->sql_freeresult($result);
+                                            }
+                                        }
+                                    } 
+                                }]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[			'S_REGISTRATION'	=> true,
+			'S_COPPA'			=> $coppa,
+			'S_HIDDEN_FIELDS'	=> $s_hidden_fields,
+			'S_UCP_ACTION'		=> append_sid("{$phpbb_root_path}ucp.$phpEx", 'mode=register'),]]></find>
+				<action type="after-add"><![CDATA[			'EVEAPI_KEYID'		=> ($config['eveapi_validation']) ? $data['eveapi_keyid'] : NULL,
+			'EVEAPI_VCODE'          => ($config['eveapi_validation']) ? $data['eveapi_vcode'] : NULL,
+			'S_EVEAPI_VALIDATE'	=> ($config['eveapi_validation']) ? true : false,
+			'S_EVEAPI_AVATARS'	=> ($auth->acl_get('u_chgavatar') && $config['eveapi_portrait']) ? true : false,
+			'L_EVEAPI_KEYID'        => "EVE API KeyId",
+			'L_EVEAPI_VCODE'        => "EVE API Verification Code",
+			'L_EVEAPI_ACCESSMASK'   => eveapi_getAccessMask(), ]]></action>
+			</edit>
+		</open>
+		<open src="includes/auth.php">
+			<edit>
+				<find><![CDATA[	function login($username, $password, $autologin = false, $viewonline = 1, $admin = 0) ]]></find>
+				<action type="replace-with"><![CDATA[	function login($username, $password, $autologin = false, $viewonline = 1, $admin = 0, $eveapi_use = false, $eveapi_keyid = "", $eveapi_vcode = "")
+]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[				$login = array(
+					'status'	=> LOGIN_SUCCESS,
+					'error_msg'	=> false,
+					'user_row'	=> $row,
+				);
+			}]]></find>
+				<action type="after-add"><![CDATA[			if($eveapi_use && ($login['status'] == LOGIN_ERROR_ACTIVE || $login['status'] == LOGIN_SUCCESS))    
+			{
+				if($login['status'] == LOGIN_SUCCESS) $login['status'] = LOGIN_ERROR_ACTIVE;
+				
+				if(!empty($eveapi_keyid) && !empty($eveapi_vcode))
+				{
+					$sql = 'SELECT user_id, username
+						FROM ' . USERS_TABLE . "
+						WHERE username_clean = '" . $db->sql_escape(utf8_clean_string($username)) . "'";
+					$result = $db->sql_query($sql);
+					$row = $db->sql_fetchrow($result);
+					$db->sql_freeresult($result);
+					
+					$characterInfo = eveapi_checkThisCharacter($eveapi_keyid, $eveapi_vcode, $row['username']);
+					if(empty($characterInfo["error"]))
+					{
+						if(!empty($characterInfo["forumGroups"]) || (empty($characterInfo["forumGroups"]) && $config['eveapi_nonmember']))
+						{
+							$sql = "UPDATE " . USERS_TABLE . "
+									SET eveapi_keyid = " . $db->sql_escape($eveapi_keyid) . ",
+									eveapi_vcode = '" . $db->sql_escape($eveapi_vcode) . "'
+									WHERE user_id = " . $row['user_id'];
+							$result = $db->sql_query($sql);
+							
+							$eveapi_forumGroups = $characterInfo["forumGroups"];
+							$extraGroups = eveapi_setForumGroups($row['user_id'], $eveapi_forumGroups, $row['username']);
+					
+							if($config['eveapi_jabber_masterswitch'])
+							{
+								if($config['eveapi_ejabber_switch'])
+								{
+									eveapi_setJabberAccess($row['user_id'], $characterInfo['jabber'], $extraGroups['jabber'], $row['username']);
+								}
+
+								if($config['eveapi_openfire_switch'])
+								{
+									eveapi_setOpenFireAccess($row['user_id'], $characterInfo['openfire'], $extraGroups['openfire'], $row['username']);
+								}
+							}
+
+							$login['status'] = LOGIN_SUCCESS;
+							$login['error_msg'] = false;
+							
+							user_active_flip('activate', $row['user_id']);
+						 }
+						else
+						{
+							$login['error_msg'] = 'This character is not permitted to have an account on this forum.';
+						}
+					}
+					else
+					{
+						$login['error_msg'] = "Wrong EVE API details!";
+					}
+				}
+				else
+				{
+					$login['error_msg'] = "Invalid keyId and/or vCode!";
+				}
+			}]]></action>
+			</edit>
+		</open>
+		<open src="includes/bbcode.php">
+			<edit>
+				<find><![CDATA[				case 12:
+					$this->bbcode_cache[$bbcode_id] = array(
+						'str'	=> array(
+							'[/attachment:$uid]'	=> $this->bbcode_tpl('inline_attachment_close', $bbcode_id)
+						),
+						'preg'	=> array(
+							'#\[attachment=([0-9]+):$uid\]#'	=> $this->bbcode_tpl('inline_attachment_open', $bbcode_id)
+						)
+					);
+				break;]]></find>
+				<action type="after-add"><![CDATA[				case 13:
+						$this->bbcode_cache[$bbcode_id] = array(
+								'preg'	=> array(
+										'#\[eveitem:$uid\]([0-9A-Za-z \-\'\:]{1,75})\[/eveitem:$uid\]#ise'	=> "\$this->bbcode_second_pass_eveitem('\$1')"
+								)
+						);
+				break;
+
+				case 14:
+						$this->bbcode_cache[$bbcode_id] = array(
+								'preg'	=> array(
+										'#\[evesystem:$uid\]([A-Za-z0-9 \-]{1,20})\[/evesystem:$uid\]#ise'	=> "\$this->bbcode_second_pass_evesystem('\$1')"
+								)
+						);
+				break;
+			
+				case 15:
+						$this->bbcode_cache[$bbcode_id] = array(
+								'preg'	=> array(
+										'#\[evefit:$uid\]([A-Za-z0-9 \-\'\n\[\]\,\#\:\(\)]{1,1500})\[/evefit:$uid\]#ise'	=> "\$this->bbcode_second_pass_evefit('\$1')"
+								)
+						);
+				break; ]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[	function bbcode_second_pass_quote($username, $quote)
+	{
+		// when using the /e modifier, preg_replace slashes double-quotes but does not
+		// seem to slash anything else
+		$quote = str_replace('\"', '"', $quote);
+		$username = str_replace('\"', '"', $username);
+
+		// remove newline at the beginning
+		if ($quote == "\n")
+		{
+			$quote = '';
+		}
+
+		$quote = (($username) ? str_replace('$1', $username, $this->bbcode_tpl('quote_username_open')) : $this->bbcode_tpl('quote_open')) . $quote;
+
+		return $quote;
+	}]]></find>
+                                <action type="after-add"><![CDATA[    /**
+    * EVE IGB item linker
+    */
+    function bbcode_second_pass_eveitem($itemname)
+    {
+        global $db, $phpbb_root_path;
+
+        $sql = 'SELECT *
+                FROM eveapi_items
+                WHERE LOWER(itemName) = "' . $db->sql_escape(strtolower($itemname)) . '"';
+        $result = $db->sql_query($sql);
+        $row = $db->sql_fetchrow($result);
+        $db->sql_freeresult($result);
+
+        $preview_array = array(2,6,18,23,40);
+        $return_string = $itemname;
+
+        if($row)
+        {
+            $return_string = '<a class="postlink">' . $row['itemName'] . '</a>&nbsp;&nbsp;' .
+                            '<img src="' . $phpbb_root_path . '/images/eve/information.png" onmouseover="this.style.cursor=\'pointer\'" onclick="CCPEVE.showInfo(' . $row['itemID'] . ')" title="Information" />&nbsp;';
+
+            $return_string .= '<img src="' . $phpbb_root_path . '/images/eve/market.png" onmouseover="this.style.cursor=\'pointer\'" onclick="CCPEVE.showMarketDetails(' . $row['itemID'] . ')" title="Market details" />&nbsp;';
+
+            if(in_array($row['categoryID'], $preview_array))
+            {
+                $return_string .= '<img src="' . $phpbb_root_path . '/images/eve/preview.png" onmouseover="this.style.cursor=\'pointer\'" onclick="CCPEVE.showPreview(' . $row['itemID'] . ')" title="Preview" />&nbsp;';
+            }
+        }
+
+        return $return_string;
+    }
+
+    /**
+    * EVE IGB system linker
+    */
+    function bbcode_second_pass_evesystem($systemname)
+    {
+        global $db, $phpbb_root_path;
+
+        $return_string = $systemname;
+        $upper_systemname = strtoupper($systemname);
+
+        if (preg_match("([A-Z]{1}[A-Z\-]+[A-Z]{1})", $upper_systemname) || preg_match("(J[0-9][\-1]{6,8})", $upper_systemname) || preg_match("([A-Z0-9]{1}\-[A-Z0-9]{4}|[A-Z0-9]{2}\-[A-Z0-9]{3}|[A-Z0-9]{3}\-[A-Z0-9]{2}|[A-Z0-9]{4}\-[A-Z0-9]{1})", $upper_systemname))
+        {
+            $sql = 	'SELECT *
+                        FROM eveapi_systems
+                        WHERE LOWER(systemName) = "' . $db->sql_escape(strtolower($systemname)) . '"';
+            $result = $db->sql_query($sql);
+            $row = $db->sql_fetchrow($result);
+            $db->sql_freeresult($result);
+
+            $return_string = "";
+
+            if($row)
+            {
+                if(!preg_match("(J[0-9]{6}[\-1]{0,2})", $row['systemName']))
+                {
+                    $return_string =    '<a class="postlink">' . $row['systemName'] . '</a>&nbsp;&nbsp;' .
+                                        '<img src="' . $phpbb_root_path . '/images/eve/information.png" onmouseover="this.style.cursor=\'pointer\'" onclick="CCPEVE.showInfo(5, ' . $row['systemID'] . ')" title="Information" />&nbsp;' .
+                                        '<img src="' . $phpbb_root_path . '/images/eve/destination.png" onmouseover="this.style.cursor=\'pointer\'" onclick="CCPEVE.setDestination(' . $row['systemID'] . ')" title="Set as destination" />&nbsp;' .
+                                        '<img src="' . $phpbb_root_path . '/images/eve/map.png" onmouseover="this.style.cursor=\'pointer\'" onclick="CCPEVE.showMap(' . $row['systemID'] . ')" title="Show on map" />&nbsp;' .
+                                        '<img src="' . $phpbb_root_path . '/images/eve/waypoint.png" onmouseover="this.style.cursor=\'pointer\'" onclick="CCPEVE.addWaypoint(' . $row['systemID'] . ')" title="Add waypoint" />&nbsp;';
+                }
+                else
+                {
+                    $return_string = '<a class="postlink">' . $row['systemName'] . '</a>&nbsp;';
+                }
+            }
+        }
+
+        return $return_string;
+    }
+
+    /**
+    * EVE Fitting
+    */
+    function bbcode_second_pass_evefit($fitting)
+    {
+        global $db, $config;
+
+        $eveapi_fittingSlotType = array(
+            "Low",
+            "Medium",
+            "High",
+            "Rig",
+            "Subsystem",
+            "Drone"
+        );
+
+        $eveapi_eftSlotType = array(
+            "low",
+            "med",
+            "high",
+            "rig",
+            "subsystem",
+            "drone"
+        );
+
+        $fitting_array = array();
+        $slotType = 0;
+        $slotCounter = 0;
+
+        $fitting_rows = explode("\n", $fitting);
+        foreach($fitting_rows as $key => $row)
+        {
+            if(!$key)
+            {
+                $fittingInfo = explode(',', preg_replace('/(\[|\])/','',$row));
+                $shipName = $fittingInfo[0];
+                $fittingDescription = htmlentities(trim($fittingInfo[1]));
+
+                $result = $db->sql_query('SELECT * FROM eveapi_ships WHERE LOWER(typeName) = "' . $db->sql_escape(strtolower($shipName)) . '"');
+                $shipDetails = $db->sql_fetchrow($result);
+                $db->sql_freeresult($result);
+
+                // Hotfix for Strategic Cruisers, since their slot layout if based on Subsystems.
+                // TODO: Correctly calculate slots based on Subsystems.
+                if($shipDetails['groupName'] == "Strategic Cruiser")
+                {
+                    $shipDetails['Low'] = 8;
+                    $shipDetails['Medium'] = 8;
+                    $shipDetails['High'] = 8;
+                    $shipDetails['Rig'] = 3;
+                    $shipDetails['Subsystem'] = 5;
+                    $shipDetails['Drone'] = 4;
+                }
+
+                // Hotfix that checks if selected ship has drone bandwidth (so it can hold and use drones), then (incorrectly) converting it to space for 4 different types of drones (since the fitting window has 4 spots).
+                if($shipDetails['Drone'] > 0)
+                {
+                    $shipDetails['Drone'] = 4;
+                }
+
+                continue;
+            }
+
+            // Empty lines means we need to switch to different slottype (from lowslot to midslot for example).
+            if(empty($row))
+            {
+                if($slotCounter < $shipDetails[$eveapi_fittingSlotType[$slotType]])
+                {
+                    for($slotCounter; $slotCounter < $shipDetails[$eveapi_fittingSlotType[$slotType]]; $slotCounter++)
+                    {
+                        $fitting_array[$eveapi_fittingSlotType[$slotType]][] = false;
+                    }
+                }
+
+                $slotType++;
+                $slotCounter = 0;
+
+                continue;
+            }
+
+            // Sometimes empty itemslots are identified this way.
+            if($row == "[empty " . $eveapi_eftSlotType[$slotType] . " slot]")
+            {
+                $fitting_array[$eveapi_fittingSlotType[$slotType]][] = false;
+
+                $slotCounter++;
+                continue;
+            }
+
+            if($slotCounter >= $shipDetails[$eveapi_fittingSlotType[$slotType]])
+            {
+                // Ignore any items posted beyond the maximum amount of slots of this type the ship has.
+                continue;
+            }
+            else
+            {
+                // Add item to the array we'll be looping below.
+                // All the junk should be weeded out by now (at least I hope so).
+                $fitting_array[$eveapi_fittingSlotType[$slotType]][] = trim($row);
+
+                $slotCounter++;
+            }
+        }
+
+        $temp_fitting_output = "";
+        $ingameFittingLink = array();
+
+        //Produce fit display
+        foreach($fitting_array as $slot => $positions)
+        {
+            foreach($positions as $position => $row)
+            {
+                if(!$row)
+                {
+                    // Empty slot, so add the empty slot icon for this type of slot.
+                    $temp_fitting_output .= '<div id="' . $slot . ($position + 1) . '"><img border="0" title="Empty ' . ucfirst($slot) . ' Slot" src="images/eve/' . $slot . '_32.png"></div>';
+                }
+                else
+                {
+                    // Check if the lines has a comma, meaning it probably holds ammo/script
+                    if(strpos($row, ','))
+                    {
+                        // Split the line, creating an array with [0] holding weapon/module and [1] holding ammo/script
+                        $splitRow = explode(',', $row);
+                        $itemName = trim($splitRow[0]);
+                        $ammoName = trim($splitRow[1]);
+
+                        // Even though a comma might be used, there might not be anything after it.
+                        if(!empty($ammoName))
+                        {
+                            // Search the item in the database; mainly to receive it's itemID needed for it's icon.
+                            $result = $db->sql_query('SELECT * FROM eveapi_items WHERE LOWER(itemName) = "' . $db->sql_escape(strtolower($ammoName)) . '"');
+                            $row = $db->sql_fetchrow($result);
+                            $db->sql_freeresult($result);
+
+                            // No result? Item not found.
+                            if(!$row)
+                            {
+                                $temp_fitting_output .= '<div id="' . $slot . 'charge' . ($position + 1) . '"><img border="0" title="Unrecognized item" src="images/eve/questionmark.png"></div>';
+                            }
+                            else
+                            {
+                                // Item found, so add the correct clickable icon.
+                                $temp_fitting_output .= '<div id="' . $slot . 'charge' . ($position + 1) . '"><img border="0" title="' . htmlentities($row['itemName']) . '" src="http://image.eveonline.com/Type/' . $row['itemID'] . '_32.png" onclick="CCPEVE.showInfo(' . $row['itemID'] . ')"  onmouseover="this.style.cursor=\'pointer\'"></div>';
+                            }
+                        }
+                    }
+                    else
+                    {
+                        // No comma found, so the itemname consists of the whole line.
+                        $itemName = $row;
+                    }
+
+                    // Drones can sometimes have the amount of them added behind them, like 'Ogre II x5'.
+                    if($slot == 'Drone')
+                    {
+                        // Remove the x5 to get the correct itemname back.
+                        $itemName = trim(preg_replace('/x[\d]+/', '', $itemName));
+                    }
+
+                    // After all the validation and correction, it's finally time to search for the module.
+                    $result = $db->sql_query('SELECT * FROM eveapi_items WHERE LOWER(itemName) = "' . $db->sql_escape(strtolower($itemName)) . '"');
+                    $row = $db->sql_fetchrow($result);
+                    $db->sql_freeresult($result);
+
+                    // No result? Item not found.
+                    if(!$row)
+                    {
+                        $temp_fitting_output .= '<div id="' . $slot . ($position + 1) . '"><img border="0" title="Unrecognized item" src="images/eve/questionmark.png"></div>';
+                    }
+                    else
+                    {
+                        // Item found, so add the correct clickable icon.
+                        $temp_fitting_output .= '<div id="' . $slot . ($position + 1) . '"><img border="0" title="' . htmlentities($row['itemName']) . '" src="http://image.eveonline.com/Type/' . $row['itemID'] . '_32.png" onclick="CCPEVE.showInfo(' . $row['itemID'] . ')" onmouseover="this.style.cursor=\'pointer\'"></div>';
+
+                        // Update or reset the slot number, so the next items is placed in the next slot.
+                        $stringSlot = (string) $slot;
+                        if(!isset($ingameFittingLink[$stringSlot][$row['itemID']]))
+                        {
+                            $ingameFittingLink[$stringSlot][$row['itemID']] = 0;
+                        }
+                        $ingameFittingLink[$stringSlot][$row['itemID']]++;
+                    }
+                }
+            }
+        }
+
+        // Build ingame fitting link
+        $ingameLink = "CCPEVE.showFitting('" . $shipDetails['typeID'];
+        $ingameLink .= eveapi_ingameLinkLoop($ingameFittingLink, "Subsystem");
+        $ingameLink .= eveapi_ingameLinkLoop($ingameFittingLink, "High");
+        $ingameLink .= eveapi_ingameLinkLoop($ingameFittingLink, "Medium");
+        $ingameLink .= eveapi_ingameLinkLoop($ingameFittingLink, "Low");
+        $ingameLink .= eveapi_ingameLinkLoop($ingameFittingLink, "Rig");
+        $ingameLink .= eveapi_ingameLinkLoop($ingameFittingLink, "Drone");
+        $ingameLink .= "::');";
+
+        // Start fitting
+        $fitting_output = '<div id="fittitle"><h4>' . htmlentities($shipDetails['typeName']) . ' - ' . htmlentities($fittingDescription) . '</h4></div>';
+        $fitting_output .= '<div id="fitting_container">';
+        $fitting_output .= '<div class="fitting_tabs"><ul class="fit-tabs"><li class="fit-tab" onclick="chooseTab(this,\'loadout\');" onmouseover="this.style.cursor=\'pointer\'">Loadout</li><li class="fit-tab" onclick="chooseTab(this,\'export\');" onmouseover="this.style.cursor=\'pointer\'">Export</li><li class="fit-tab" onclick="' . $ingameLink . '" onmouseover="this.style.cursor=\'pointer\'">Ingame Fitting</li></ul><div style="clear:both;"></div></div>';
+        $fitting_output .= '<div id="fittext" style="display:none;"><textarea readonly="readonly">' . htmlentities(str_replace("\n", "\r", $fitting)) . '</textarea></div>';
+        $fitting_output .= '<div title="fitting" id="fitting">';
+
+        // Fitting window
+        $fitting_output .= '<div id="fittingwindow"><img border="0" alt="" src="images/eve/fitting_panel.png"></div>';
+        $fitting_output .= '<div id="shiprace"><img border="0" alt="" title="' . $shipDetails['Icon'] . '" src="images/eve/races/' . $shipDetails['Icon'] . '.png"></div>';
+        $fitting_output .= '<div id="shipicon"><img border="0" alt="" title="' . $shipDetails['Tech'] . ' - ' . $shipDetails['groupName'] . ' - ' . htmlentities($shipDetails['typeName']) . '" src="http://image.eveonline.com/Render/' . $shipDetails['typeID'] . '_64.png" onclick="CCPEVE.showInfo(' . $shipDetails['typeID'] . ')" onmouseover="this.style.cursor=\'pointer\'"></div>';
+
+        // Actual fitting, whereas $temp_fitting_output is holding all the slot information looped above.
+        $fitting_output .= $temp_fitting_output;
+
+        // End fitting
+        $fitting_output .= '</div></div>';
+
+        return $fitting_output;
+    }]]></action>
+			</edit>
+		</open>
+		<open src="includes/constants.php">
+			<edit>
+				<find><![CDATA[define('NUM_CORE_BBCODES', 12); ]]></find>
+				<action type="replace-with"><![CDATA[define('NUM_CORE_BBCODES', 15);]]></action>
+			</edit>
+		</open>
+		<open src="includes/functions.php">
+			<edit>
+				<find><![CDATA[function login_box($redirect = '', $l_explain = '', $l_success = '', $admin = false, $s_display = true)]]></find>
+				<action type="replace-with"><![CDATA[function login_box($redirect = '', $l_explain = '', $l_success = '', $admin = false, $s_display = true, $eveapi_use = false)]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[		// If authentication is successful we redirect user to previous page
+		$result = $auth->login($username, $password, $autologin, $viewonline, $admin);]]></find>
+				<action type="replace-with"><![CDATA[		$eveapi_update = request_var('eveapi_update', '', true);
+		if(!empty($eveapi_update))
+		{
+			$eveapi_keyid = request_var('eveapi_keyid', '', true);
+			$eveapi_vcode = request_var('eveapi_vcode', '', true);
+			
+			if (!empty($eveapi_keyid) && !empty($eveapi_vcode))
+			{
+				if (preg_match("/[0-9]{1,15}/", $eveapi_keyid) && (preg_match("/[A-Za-z0-9]{64}/", $eveapi_vcode)))
+				{
+					// If authentication is successful we redirect user to previous page
+					$result = $auth->login($username, $password, $autologin, $viewonline, $admin, true, $eveapi_keyid, $eveapi_vcode);
+				}
+				else
+				{
+					trigger_error('Invalid keyid and/or vcode!');
+				}
+			}
+			else
+			{
+				trigger_error('Invalid keyid and/or vcode!');
+			}
+		}
+		else
+		{
+			// If authentication is successful we redirect user to previous page
+			$result = $auth->login($username, $password, $autologin, $viewonline, $admin);
+		} ]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[		'USERNAME_CREDENTIAL'	=> 'username',
+		'PASSWORD_CREDENTIAL'	=> ($admin) ? 'password_' . $credential : 'password',
+	));]]></find>
+				<action type="after-add"><![CDATA[	if($eveapi_use)
+	{
+		$template->assign_vars(array(
+			'S_EVEAPI_UPDATE'	=> true,
+			'EVEAPI_ACCESSMASK'	=> eveapi_getAccessMask()
+		));
+	} ]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[		'T_RANKS'				=> $config['ranks_path'],
+		'T_UPLOAD'				=> $config['upload_path'],
+
+		'SITE_LOGO_IMG'			=> $user->img('site_logo'),]]></find>
+				<action type="after-add"><![CDATA[        'S_EVEAPI_TRUSTED'           => $config['server_protocol'] . $config['server_name'] . $config['script_path'] . '/*',]]></action>
+			</edit>
+		</open>
+		<open src="includes/functions_admin.php">
+			<edit>
+				<find><![CDATA[			case INACTIVE_MANUAL:
+				$row['inactive_reason'] = $user->lang['INACTIVE_REASON_MANUAL'];
+			break;
+
+			case INACTIVE_REMIND:
+				$row['inactive_reason'] = $user->lang['INACTIVE_REASON_REMIND'];
+			break;]]></find>
+				<action type="after-add"><![CDATA[			case INACTIVE_EVEAPI_INVALID:
+					$row['inactive_reason'] = "Invalid EVE API key.";
+			break;
+
+			case INACTIVE_EVEAPI_NONMEMBER:
+					$row['inactive_reason'] = "With the current configuration, the user is not allowed to have an account.";
+			break; ]]></action>
+			</edit>
+		</open>
+		<open src="includes/functions_display.php">
+			<edit>
+				<find><![CDATA[	$num_predefined_bbcodes = 22; ]]></find>
+				<action type="replace-with"><![CDATA[	$num_predefined_bbcodes = 28;]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[			if (!$config['allow_avatar_upload'] && !$ignore_config) ]]></find>
+				<action type="replace-with"><![CDATA[			if (!$config['allow_avatar_upload'] && !$ignore_config && !$config['eveapi_portrait']) ]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[		case AVATAR_REMOTE:
+			if (!$config['allow_avatar_remote'] && !$ignore_config)
+			{
+				return '';
+			}
+		break;
+	}]]></find>
+				<action type="after-add"><![CDATA[ 	if ($config['eveapi_validation'] && $config['eveapi_portrait'] && $config['eveapi_portrait_resize'])
+	{
+		$avatar_width = $config['eveapi_portrait_size'];
+		$avatar_height = $config['eveapi_portrait_size'];
+	}]]></action>
+			</edit>
+		</open>
+		<open src="includes/functions_user.php">
+			<edit>
+				<find><![CDATA[	$sql_ary = array(
+		'username'			=> $user_row['username'],
+		'username_clean'	=> $username_clean,
+		'user_password'		=> (isset($user_row['user_password'])) ? $user_row['user_password'] : '',
+		'user_pass_convert'	=> 0,
+		'user_email'		=> strtolower($user_row['user_email']),
+		'user_email_hash'	=> phpbb_email_hash($user_row['user_email']),
+		'group_id'			=> $user_row['group_id'],
+		'user_type'			=> $user_row['user_type'],
+	);]]></find>
+				<action type="after-add"><![CDATA[ 	if ($config['eveapi_validation'])
+	{
+		$sql_ary = array_merge($sql_ary,array(
+			'eveapi_keyid'	=> $user_row['eveapi_keyid'],
+			'eveapi_vcode'	=> $user_row['eveapi_vcode'],
+		));
+	}]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[		if (sizeof($sql_ary)) ]]></find>
+				<action type="replace-with"><![CDATA[		if (sizeof($sql_ary) || isset($_POST['eveapi_getPortrait']))]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[				if ($userdata['user_avatar_type'] == AVATAR_UPLOAD)
+				{
+					// Delete old avatar if present
+					if ((!empty($userdata['user_avatar']) && empty($sql_ary['user_avatar']))
+					   || ( !empty($userdata['user_avatar']) && !empty($sql_ary['user_avatar']) && $ext_new !== $ext_old))
+					{
+						avatar_delete('user', $userdata);
+					}
+				}
+			}]]></find>
+				<action type="after-add"><![CDATA[			if(isset($_POST['eveapi_getPortrait']) && $change_avatar)
+			{
+				$eveapi_characterID = eveapi_getCharacterID($userdata["username"]);
+				if($eveapi_characterID)
+				{
+					$sql_ary['user_avatar'] = eveapi_getPortrait($eveapi_characterID, (($custom_userdata === false) ? $user->data['user_id'] : $custom_userdata['user_id']));
+					$sql_ary['user_avatar_type'] = AVATAR_UPLOAD;
+					$sql_ary['user_avatar_width'] = $config['eveapi_portrait_size'];
+					$sql_ary['user_avatar_height'] = $config['eveapi_portrait_size'];
+				}
+			} ]]></action>
+			</edit>
+		</open>
+		<open src="includes/message_parser.php">
+			<edit>
+				<find><![CDATA[ 			'flash'			=> array('bbcode_id' => 11,	'regexp' => array('#\[flash=([0-9]+),([0-9]+)\](.*?)\[/flash\]#uie' => "\$this->bbcode_flash('\$1', '\$2', '\$3')")) ]]></find>
+				<action type="replace-with"><![CDATA[ 			'flash'			=> array('bbcode_id' => 11,	'regexp' => array('#\[flash=([0-9]+),([0-9]+)\](.*?)\[/flash\]#uie' => "\$this->bbcode_flash('\$1', '\$2', '\$3')")),
+			'eveitem'		=> array('bbcode_id' => 13,	'regexp' => array('#\[eveitem\]([0-9A-Za-z \-\']{1,75})\[/eveitem\]#ise' => "\$this->bbcode_eve_item('\$1')")),
+			'evesystem'		=> array('bbcode_id' => 14,	'regexp' => array('#\[evesystem\]([A-Za-z0-9 \-]{1,20})\[/evesystem\]#ise' => "\$this->bbcode_eve_system('\$1')")),
+			'evefit'		=> array('bbcode_id' => 15,	'regexp' => array('#\[evefit\]([A-Za-z0-9 \-\'\n\[\]\,\:\#\(\)]{1,1500})\[/evefit\]#ise' => "\$this->bbcode_eve_fit('\$1')"))
+]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[	/**
+	* Parse inline attachments [ia]
+	*/
+	function bbcode_attachment($stx, $in)
+	{
+		if (!$this->check_bbcode('attachment', $in))
+		{
+			return $in;
+		}
+
+		return '[attachment=' . $stx . ':' . $this->bbcode_uid . ']<!-- ia' . $stx . ' -->' . trim($in) . '<!-- ia' . $stx . ' -->[/attachment:' . $this->bbcode_uid . ']';
+	}]]></find>
+				<action type="after-add"><![CDATA[    /**
+    * EVE ITEM BBcode
+    */
+    function bbcode_eve_item($in)
+    {
+        if (!$this->check_bbcode('eveitem', $in))
+        {
+            return $in;
+        }
+
+        return '[eveitem:' . $this->bbcode_uid . ']' . $in . '[/eveitem:' . $this->bbcode_uid . ']';
+    }
+
+    /**
+    * EVE SYSTEM BBcode
+    */
+    function bbcode_eve_system($in)
+    {
+        if (!$this->check_bbcode('evesystem', $in))
+        {
+            return $in;
+        }
+
+        return '[evesystem:' . $this->bbcode_uid . ']' . $in . '[/evesystem:' . $this->bbcode_uid . ']';
+    }
+
+    /**
+    * EVE FITTING BBcode
+    */
+    function bbcode_eve_fit($in)
+    {
+        if (!$this->check_bbcode('evefit', $in))
+        {
+            return $in;
+        }
+
+        return '[evefit:' . $this->bbcode_uid . ']' . $in . '[/evefit:' . $this->bbcode_uid . ']';
+    } ]]></action>
+			</edit>
+		</open>
+		<open src="styles/prosilver/template/login_body.html">
+			<edit>
+				<find><![CDATA[			<!-- IF S_DISPLAY_FULL_LOGIN and (U_SEND_PASSWORD or U_RESEND_ACTIVATION) -->]]></find>
+				<action type="replace-with"><![CDATA[			<!-- IF S_DISPLAY_FULL_LOGIN and (U_SEND_PASSWORD or U_RESEND_ACTIVATION) and not S_EVEAPI_UPDATE -->]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[				<!-- IF U_RESEND_ACTIVATION --><dd><a href="{U_RESEND_ACTIVATION}">{L_RESEND_ACTIVATION}</a></dd><!-- ENDIF -->]]></find>
+				<action type="after-add"><![CDATA[				<!-- IF not S_EVEAPI_UPDATE --><dd><a href="eveapi_update.php">I would like to reactivate my account by providing new API information.</a></dd><!-- ENDIF -->]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[		<!-- IF CAPTCHA_TEMPLATE and S_CONFIRM_CODE -->
+			<!-- DEFINE $CAPTCHA_TAB_INDEX = 3 -->
+			<!-- INCLUDE {CAPTCHA_TEMPLATE} -->
+		<!-- ENDIF -->]]></find>
+				<action type="before-add"><![CDATA[ 		<!-- IF S_EVEAPI_UPDATE -->
+        <dl>
+			<dt><label for="eveapi_keyid">EVE API KeyId:</label></dt>
+			<dd><input type="text" tabindex="3" name="eveapi_keyid" id="eveapi_keyid" size="10" maxlength="25" value="" class="inputbox autowidth" title="EVE API KeyId" /></dd>
+		</dl>
+		<dl>
+			<dt><label for="eveapi_vcode">EVE API Verification Code:</label></dt>
+			<dd><input type="text" tabindex="4" name="eveapi_vcode" id="eveapi_vcode" size="64" maxlength="64" value="" class="inputbox autowidth" title="EVE API Verification Code" /><input type="hidden" name="eveapi_update" value="yes" /></dd>
+			<dd>Click <a href="https://community.eveonline.com/support/api-key//createpredefined?accessmask={L_EVEAPI_ACCESSMASK}" target="_blank">here</a> to create an API key with the correct permissions. Don't forget to set it as &#039;No Expiry&#039;!<br />It can sometimes take up to 15 minutes before the new API key is activated.</dd>
+		</dl>
+        <!-- ENDIF --> ]]></action>
+			</edit>
+		</open>
+		<open src="styles/prosilver/template/overall_footer.html">
+			<edit>
+				<find><![CDATA[	<div class="copyright">{CREDIT_LINE}]]></find>
+				<action type="replace-with"><![CDATA[	<div class="copyright">{CREDIT_LINE}  &#166; Powered by <a href="https://forums.eveonline.com/default.aspx?g=posts&m=184934">EVE API Revisited for phpBB 3.0.1x</a> - <a href="#" onclick="CCPEVE.showInfo(1377, 759440135)">Mr Twinkie</a>]]></action>
+			</edit>
+		</open>
+		<open src="styles/prosilver/template/overall_header.html">
+			<edit>
+				<find><![CDATA[<link href="{T_THEME_PATH}/print.css" rel="stylesheet" type="text/css" media="print" title="printonly" />
+<link href="{T_STYLESHEET_LINK}" rel="stylesheet" type="text/css" media="screen, projection" />]]></find>
+				<action type="after-add"><![CDATA[<link href="{T_SUPER_TEMPLATE_PATH}/eveapi_fitting.css" rel="stylesheet" type="text/css" />
+<script src="{T_SUPER_TEMPLATE_PATH}/eveapi_fitting.js" type="text/javascript"></script>
+<script type="text/javascript">
+	if (typeof CCPEVE != "undefined") {
+	  CCPEVE.requestTrust('{S_EVEAPI_TRUSTED}'); 
+	}
+</script>]]></action>
+			</edit>
+		</open>
+		<open src="styles/prosilver/template/posting_buttons.html">
+			<edit>
+				<find><![CDATA[	var bbtags = new Array('[b]','[/b]','[i]','[/i]','[u]','[/u]','[quote]','[/quote]','[code]','[/code]','[list]','[/list]','[list=]','[/list]','[img]','[/img]','[url]','[/url]','[flash=]', '[/flash]','[size=]','[/size]'<!-- BEGIN custom_tags -->, {custom_tags.BBCODE_NAME}<!-- END custom_tags -->); ]]></find>
+				<action type="replace-with"><![CDATA[	var bbtags = new Array('[b]','[/b]','[i]','[/i]','[u]','[/u]','[quote]','[/quote]','[code]','[/code]','[list]','[/list]','[list=]','[/list]','[img]','[/img]','[url]','[/url]','[flash=]', '[/flash]','[size=]','[/size]', '[eveitem]', '[/eveitem]', '[evesystem]', '[/evesystem]', '[evefit]', '[/evefit]'<!-- BEGIN custom_tags -->, {custom_tags.BBCODE_NAME}<!-- END custom_tags -->);]]></action>
+			</edit>
+			<edit>
+				<find><![CDATA[	<!-- IF S_BBCODE_FLASH -->
+		<input type="button" class="button2" accesskey="d" name="addbbcode18" value="Flash" onclick="bbstyle(18)" title="{L_BBCODE_D_HELP}" />
+	<!-- ENDIF -->]]></find>
+				<action type="after-add"><![CDATA[ 	<input type="button" class="button2" accesskey="eveitem" name="addbbcode22" value="EVE Item" onclick="bbstyle(22)" title="EVE Item" />
+	<input type="button" class="button2" accesskey="evesystem" name="addbbcode24" value="EVE System" onclick="bbstyle(24)" title="EVE System" />
+    <input type="button" class="button2" accesskey="evefit" name="addbbcode26" value="EVE Fitting" onclick="bbstyle(26)" title="EVE Fitting" />
+]]></action>
+			</edit>
+		</open>
+		<open src="styles/prosilver/template/ucp_avatar_options.html">
+			<edit>
+				<find><![CDATA[			<dt><label for="width">{L_LINK_REMOTE_SIZE}:</label><br /><span>{L_LINK_REMOTE_SIZE_EXPLAIN}</span></dt>
+			<dd>
+				<label for="width"><input type="text" name="width" id="width" size="3" value="{AVATAR_WIDTH}" class="inputbox autowidth" /> {L_PIXEL}</label> &times;&nbsp; 
+				<label for="height"><input type="text" name="height" id="height" size="3" value="{AVATAR_HEIGHT}" class="inputbox autowidth" /> {L_PIXEL}</label>
+			</dd>
+		</dl>
+	<!-- ENDIF -->]]></find>
+				<action type="after-add"><![CDATA[ 	<!-- IF S_EVEAPI_PORTRAIT -->
+		<dl>
+			<dt><label for="eveapi_getPortrait">EVE Portrait: </label><br /><span>Use your ingame Portrait as forum Avatar!</span></dt>
+			<dd><label for="eveapi_getPortrait"><input type="checkbox" name="eveapi_getPortrait" id="eveapi_getPortrait" /> Download Portrait</label></dd>
+		</dl>
+	<!-- ENDIF --> ]]></action>
+			</edit>
+		</open>
+		<open src="styles/prosilver/template/ucp_profile_reg_details.html">
+			<edit>
+				<find><![CDATA[	<!-- IF S_CHANGE_PASSWORD -->
+		<dl>
+			<dt><label for="new_password">{L_NEW_PASSWORD}:</label><br /><span>{L_CHANGE_PASSWORD_EXPLAIN}</span></dt>
+			<dd><input type="password" name="new_password" id="new_password" maxlength="255" value="{NEW_PASSWORD}" class="inputbox" title="{L_CHANGE_PASSWORD}" /></dd>
+		</dl>
+		<dl>
+			<dt><label for="password_confirm">{L_CONFIRM_PASSWORD}:</label><br /><span>{L_CONFIRM_PASSWORD_EXPLAIN}</span></dt>
+			<dd><input type="password" name="password_confirm" id="password_confirm" maxlength="255" value="{PASSWORD_CONFIRM}" class="inputbox" title="{L_CONFIRM_PASSWORD}" /></dd>
+		</dl>
+	<!-- ENDIF -->]]></find>
+				<action type="after-add"><![CDATA[ 	<!-- IF S_EVEAPI_VALIDATE -->
+		<dl>
+			<dt><label for="eveapi_keyid">EVE API KeyId:</label></dt>
+			<dd><input type="text" name="eveapi_keyid" id="eveapi_keyid" size="10" maxlength="15" value="{EVEAPI_KEYID}" class="inputbox autowidth" title="EVE API KeyId" /></dd>
+		</dl>
+		<dl>
+			<dt><label for="eveapi_vcode">EVE API Verification Code:</label></dt>
+			<dd><input type="text" name="eveapi_vcode" id="eveapi_vcode" size="64" maxlength="64" value="{EVEAPI_VCODE}" class="inputbox autowidth" title="EVE API Verification Code" /></dd>
+		</dl>
+		<!-- IF S_EVEAPI_TS -->
+		<dl>
+			<dt><label for="eveapi_ts">TeamSpeak UID:</label></dt>
+			<dd><input type="text" name="eveapi_ts" id="eveapi_ts" size="30" maxlength="28" value="{EVEAPI_TS}" class="inputbox autowidth" title="TeamSpeak UID" /></dd>
+		</dl>
+		<!-- ENDIF -->
+	<!-- ENDIF --> ]]></action>
+			</edit>
+		</open>
+		<open src="styles/prosilver/template/ucp_register.html">
+			<edit>
+				<find><![CDATA[	<dl>
+		<dt><label for="password_confirm">{L_CONFIRM_PASSWORD}:</label></dt>
+		<dd><input type="password" tabindex="5" name="password_confirm" id="password_confirm" size="25" value="{PASSWORD_CONFIRM}" class="inputbox autowidth" title="{L_CONFIRM_PASSWORD}" /></dd>
+	</dl>]]></find>
+				<action type="after-add"><![CDATA[ 	<!-- IF S_EVEAPI_VALIDATE -->
+	<dl>
+		<dt><label for="eveapi_keyid">{L_EVEAPI_KEYID}:</label></dt>
+		<dd><input type="text" tabindex="6" name="eveapi_keyid" id="eveapi_keyid" size="10" maxlength="15" value="{EVEAPI_KEYID}" class="inputbox autowidth" title="{L_EVEAPI_KEYID}" /></dd>
+	</dl>
+	<dl>
+		<dt><label for="eveapi_vcode">{L_EVEAPI_VCODE}:</label></dt>
+		<dd><input type="text" tabindex="7" name="eveapi_vcode" id="eveapi_vcode" size="64" maxlength="64" value="{EVEAPI_VCODE}" class="inputbox autowidth" title="{L_EVEAPI_VCODE}" /></dd>
+		<dd>Click <a href="https://community.eveonline.com/support/api-key//createpredefined?accessmask={L_EVEAPI_ACCESSMASK}" target="_blank">here</a> to create an API key with the correct permissions. Don't forget to set it as &#039;No Expiry&#039;!<br />It can sometimes take up to 15 minutes before the new API key is activated.</dd>
+	</dl>
+	<!-- ENDIF --> ]]></action>
+			</edit>
+		</open>
+		<open src="common.php">
+			<edit>
+				<find><![CDATA[ foreach ($cache->obtain_hooks() as $hook)
+{
+	@include($phpbb_root_path . 'includes/hooks/' . $hook . '.' . $phpEx);
+} ]]></find>
+				<action type="after-add"><![CDATA[// EVE API start
+// Moved above masterswitch to avoid errors trying to use EVE BBcodes without having masterswitch enabled
+require($phpbb_root_path . "/includes/eveapi/functions_eveapi.php");
+	
+// Load PHEAL				
+require($phpbb_root_path . "/includes/eveapi/Pheal/Pheal.php");
+spl_autoload_register("Pheal::classload");
+PhealConfig::getInstance()->http_user_agent = "EVE API for phpBB 3.x (phpBB 3.x; Pheal)";
+					
+// Load TeamSpeak3 PHP Framework
+require($phpbb_root_path . "/includes/eveapi/TeamSpeak3/TeamSpeak3.php");
+					
+// Load OpenFireUserService class
+require($phpbb_root_path . "/includes/eveapi/OpenFireUserService/OpenFireUserService.php");
+
+// EVE API end ]]></action>
+			</edit>
+		</open>
+                
+                <diy-instructions lang="en"><![CDATA[--------------------------------------------------------------------------------------------
+                
+        Browse to install/ and run the installer
+
+        Clear your cache in the "Administration Control Panel" (ACP) > "General" > "Purge the cache"
+
+        Refresh your Styles:
+        "Administration Control Panel" (ACP) > "Styles" > "Templates" > each > "refresh"
+        "Administration Control Panel" (ACP) > "Styles" > "Themes" > each > "refresh"
+        "Administration Control Panel" (ACP) > "Styles" > "Imagesets" > each > "refresh"
+        
+        --------------------------------------------------------------------------------------------]]></diy-instructions>
+		
+	</action-group>
+</mod>
