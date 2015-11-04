@@ -30,7 +30,7 @@
 			</author>
 		</author-group>
 
-		<mod-version>7.0.2</mod-version>
+		<mod-version>7.0.3</mod-version>
 
 		<installation>
 			<level>moderate</level>
@@ -41,20 +41,27 @@
 		<history>
 			<entry>
 				<date>2015-11-04</date>
+				<rev-version>7.0.3</rev-version>
+				<changelog lang="en">
+					<change>Formatting error fixed.</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2015-11-04</date>
 				<rev-version>7.0.2</rev-version>
 				<changelog lang="en">
 					<change>Fixed curl issue.</change>
 				</changelog>
 			</entry>
 			<entry>
-				<date>2015-11-03</date>
+				<date>2015-11-04</date>
 				<rev-version>7.0.1</rev-version>
 				<changelog lang="en">
 					<change>XML Fix</change>
 				</changelog>
 			</entry>
 			<entry>
-				<date>2015-11-02</date>
+				<date>2015-11-04</date>
 				<rev-version>7.0.0</rev-version>
 				<changelog lang="en">
 					<change>Project officially taken over by Mr Twinkie (Shibdib) with the blessing of Cyerus.</change>
