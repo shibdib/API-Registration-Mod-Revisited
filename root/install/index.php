@@ -49,6 +49,10 @@ $version_config_name = 'eveapi_version';
 * The version numbering must otherwise be compatible with the version_compare function - http://php.net/manual/en/function.version-compare.php
 */
 $versions = array(
+	'7.0.4'	=> array(
+		'custom'	=> 'umil_eveapi_7_0_4',
+	),
+	
 	'7.0.0'	=> array(
 		'custom'	=> 'umil_eveapi_7_0_0',
 	),
@@ -117,6 +121,150 @@ include($phpbb_root_path . 'umil/umil_auto.' . $phpEx);
 /*
  * Functions based on version
  */
+ function umil_eveapi_7_0_4($action, $version)
+{
+    global $db, $table_prefix, $umil;
+    
+    if($action == 'uninstall')
+    {
+        // Modifications to the Group-settings
+        // ****************************************************************************************************
+        // 
+        // Backing up Group settings
+        if ($umil->table_exists('eveapi_grouptmp'))
+        {
+            $umil->table_remove('eveapi_grouptmp');
+        }
+
+        $umil->table_add('eveapi_grouptmp', array(
+            'COLUMNS'        => array(
+                'group_id'					=> array('UINT:8', 0),
+                'group_eveapi_special'		=> array('TINT:1', 0),
+                'group_eveapi_ts3'			=> array('UINT:8', 0),
+                'group_eveapi_jabber'		=> array('TINT:1', 0),
+				'group_eveapi_openfire'		=> array('VCHAR:20', ''),
+            ),
+            'PRIMARY_KEY'    => 'group_id',
+        ));
+
+        $sql = "INSERT INTO eveapi_grouptmp (group_id, group_eveapi_special, group_eveapi_ts3, group_eveapi_jabber, group_eveapi_openfire) 
+                SELECT group_id, group_eveapi_special, group_eveapi_ts3, group_eveapi_jabber, group_eveapi_openfire
+                FROM " . GROUPS_TABLE;
+        $db->sql_query($sql);
+        
+        $umil->table_column_remove(GROUPS_TABLE, 'group_eveapi_special');
+        $umil->table_column_remove(GROUPS_TABLE, 'group_eveapi_ts3');
+        $umil->table_column_remove(GROUPS_TABLE, 'group_eveapi_jabber');
+		$umil->table_column_remove(GROUPS_TABLE, 'group_eveapi_openfire');
+        // ****************************************************************************************************
+    }
+    
+    if($action == 'install')
+    {
+        // Modifications to the Group-settings
+        if (!$umil->table_column_exists(GROUPS_TABLE, 'group_eveapi_special'))
+        {
+            $umil->table_column_add(GROUPS_TABLE, 'group_eveapi_special', array('TINT:1', 0));
+        }
+
+        if (!$umil->table_column_exists(GROUPS_TABLE, 'group_eveapi_ts3'))
+        {
+            $umil->table_column_add(GROUPS_TABLE, 'group_eveapi_ts3', array('UINT:8', 0));
+        }
+
+        if (!$umil->table_column_exists(GROUPS_TABLE, 'group_eveapi_jabber'))
+        {
+            $umil->table_column_add(GROUPS_TABLE, 'group_eveapi_jabber', array('TINT:1', 0));
+        }
+		
+        if (!$umil->table_column_exists(GROUPS_TABLE, 'group_eveapi_openfire'))
+        {
+            $umil->table_column_add(GROUPS_TABLE, 'group_eveapi_openfire', array('VCHAR:20', ""));
+        }
+
+        // Filling API data from 'prepare'-script (if applicable)
+        if($umil->table_exists("eveapi_grouptmp"))
+        {
+            $sql = "SELECT *
+                    FROM eveapi_grouptmp
+                    ORDER BY group_id";
+            $result = $db->sql_query($sql);
+
+            while ($g_row = $db->sql_fetchrow($result))
+            {
+                    $openfire = $umil->table_column_exists('eveapi_grouptmp', 'group_eveapi_openfire') ? $g_row['group_eveapi_openfire'] : "";
+				
+					$sql_in = "UPDATE " . GROUPS_TABLE . "
+                    SET group_eveapi_special = " . $g_row['group_eveapi_special'] . ", group_eveapi_ts3 = " . $g_row['group_eveapi_ts3'] . ", group_eveapi_jabber = " . $g_row['group_eveapi_jabber'] . ", group_eveapi_openfire = '" . $openfire . "'
+                    WHERE group_id = " . $g_row['group_id'];
+                    $db->sql_query($sql_in);
+            }
+            $db->sql_freeresult($result);
+
+            $umil->table_remove('eveapi_grouptmp');
+        }
+    }
+    
+    if($action == 'update')
+    {
+        // Rubicon 1.1 stuff, yay!
+        umil_eveapi_update_eve_database();
+        
+        // ACP Module Managament
+        // Check if module category exists before attempting delete
+        // NOTICE the Jabber-module missing from the list! (as version < 6.2.0 doesn't have the Jabber module)
+        if($umil->module_exists('acp', 'ACP_CAT_GENERAL', 'ACP_CAT_EVEAPI'))
+        {
+            $umil->module_remove('acp', 'ACP_CAT_EVEAPI', array(
+                'module_basename'   => 'eveapi',
+                'modes'             => array('general', 'corporation', 'alliance', 'standings', 'factionwarfare', 'teamspeak3', 'jabber', 'accessmask'),
+            ));
+            
+            $umil->module_remove('acp', 'ACP_CAT_GENERAL', 'ACP_CAT_EVEAPI');
+        }
+        
+        // And re-adding, after check if it doesn't exist anymore.
+        if(!$umil->module_exists('acp', 'ACP_CAT_GENERAL', 'ACP_CAT_EVEAPI'))
+        {
+            $umil->module_add(array(
+                // Add a new category named ACP_CAT_EVEAPI to ACP_CAT_GENERAL
+                array('acp', 'ACP_CAT_GENERAL', 'ACP_CAT_EVEAPI'),
+
+                // Add the settings and features modes from the acp_eveapi module to the ACP_CAT_EVEAPI category using the "automatic" method.
+                array('acp', 'ACP_CAT_EVEAPI', array(
+                        'module_basename'       => 'eveapi',
+                        'modes'                 => array('general', 'corporation', 'alliance', 'standings', 'factionwarfare', 'teamspeak3', 'jabber', 'accessmask'),
+                    ),
+                ),
+            ));
+        }
+        
+        // Added database support for Group-based settings
+        if (!$umil->table_column_exists(GROUPS_TABLE, 'group_eveapi_special'))
+        {
+            $umil->table_column_add(GROUPS_TABLE, 'group_eveapi_special', array('TINT:1', 0));
+        }
+
+        if (!$umil->table_column_exists(GROUPS_TABLE, 'group_eveapi_ts3'))
+        {
+            $umil->table_column_add(GROUPS_TABLE, 'group_eveapi_ts3', array('UINT:8', 0));
+        }
+
+        if (!$umil->table_column_exists(GROUPS_TABLE, 'group_eveapi_jabber'))
+        {
+            $umil->table_column_add(GROUPS_TABLE, 'group_eveapi_jabber', array('TINT:1', 0));
+        }
+		
+        if (!$umil->table_column_exists(GROUPS_TABLE, 'group_eveapi_openfire'))
+        {
+            $umil->table_column_add(GROUPS_TABLE, 'group_eveapi_openfire', array('VCHAR:20', 0));
+        }
+    }
+    
+    $umil->cache_purge();
+
+    return 'UMIL_EVEAPI_7_0_4';
+}
  function umil_eveapi_7_0_0($action, $version)
 {
     global $db, $table_prefix, $umil;
