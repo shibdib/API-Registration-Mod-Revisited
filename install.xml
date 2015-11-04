@@ -43,9 +43,8 @@
 				<date>2015-11-04</date>
 				<rev-version>7.0.0</rev-version>
 				<changelog lang="en">
-					<change>Project officially taken over by Mr Twinkie (Shibdib) with the blessing of Cyreus.</change>
+					<change>Project officially taken over by Mr Twinkie (Shibdib) with the blessing of Cyerus.</change>
 					<change>API Links updated on new user registration and re-activation.</change>
-					<change>Database Updated to Parallax.</change>
 					<change>Primary phpBB version set to 3.0.14</change>
 					<change>Disabled part of the cron that de-activates accounts on errors as it caused a lot of false positives. (Working on a fix)</change>
 					<change>Mod renamed to represent change in primary developer.</change>
