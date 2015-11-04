@@ -3,33 +3,47 @@
 
 Cyerus brought us this mod and it's up to us to keep it running smoothly. Pull requests highly encouraged.
 
-Current Version 7.0.0
 
-Change Log From Cyerus Last Release
-
-
-2015-11-04
-
-7.0.0
-- Project officially taken over by Mr Twinkie (Shibdib) with the blessing of Cyerus.
-- API Links updated on new user registration and re-activation.
-- Primary phpBB version set to 3.0.14
-- Disabled part of the cron that de-activates accounts on errors as it caused a lot of false positives. (Working on a fix)
-- Mod renamed to represent change in primary developer.
-
+Requirements
+-----------
+```
+- Apache2 Server
+- Database of some sort (Preferably MYSQL)
+- PHP Installed
+```
 
 Install
-
+-----------
+```
 1. Install a clean version of phpBB 3.0.14 and AUTOMOD
 
-2. Download this as a .zip and install using AUTOMOD
 
-3. Be sure to follow directions and remove install folder at the end.
+2. Download the latest release as a .zip and install using AUTOMOD
 
+3. Clear forum cache
 
-Update
+4. Go to *url.com*/install and select install
 
+5. Once installed, delete the install folder from your forum
+```
 
+Update (For DB Updates)
+-----------
+```
+1. Clear forum cache
+
+2. Download the latest release as a .zip and install using AUTOMOD
+
+3. Clear forum cache
+
+4. Go to *url.com*/install and select update
+
+5. Once installed, delete the install folder from your forum
+```
+
+Update (For Full Releases)
+-----------
+```
 1. Uninstall EVE API 6.3.0 from the AutoMOD section of the ACP.
 
 2. Clear forum cache
@@ -49,5 +63,5 @@ Update
 9. Cycle through each of the forum group setting pages and save them
 
 10. Clear forum cache one last time, and we should be done.
-
+```
 

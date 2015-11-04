@@ -5,7 +5,7 @@
 * @package eveapi
 * @copyright (c) 2015 Mr Twinkie
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
-*
+* Created originally by cyerus
 */
 
 /**

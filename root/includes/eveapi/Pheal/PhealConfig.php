@@ -76,7 +76,7 @@ class PhealConfig
      * which http request method should be used 'curl' or 'file'
      * @var String
      */
-    public $http_method	= "curl";
+    public $http_method	= "file";
     
     /**
      * which outgoing ip/inteface should be used for the http request

@@ -5,7 +5,7 @@
 	<header>
 		<license>http://opensource.org/licenses/gpl-license.php GNU General Public License v2</license>
 
-		<title lang="en">EVE API MOD Revisited by Mr Twinkie</title>
+		<title lang="en">EVE API MOD Revisited</title>
 
 		<description lang="en">This file contains the instructions for the installation of the EVE API MOD Revisited for phpBB 3.x</description>
 
@@ -15,7 +15,7 @@
 			<author>
 				<realname>Bob Sardinia</realname>
 				<username phpbbcom="no">Mr Twinkie</username>
-				<homepage>https://forums.eveonline.com/default.aspx?g=posts&t=453906</homepage>
+				<homepage>https://forums.eveonline.com/default.aspx?g=posts&amp;t=453906</homepage>
 				<contributions-group>
 					<contributions status="current" from="2015-11-04" position="Developer"/>
 				</contributions-group>
@@ -30,7 +30,7 @@
 			</author>
 		</author-group>
 
-		<mod-version>7.0.0</mod-version>
+		<mod-version>7.0.2</mod-version>
 
 		<installation>
 			<level>moderate</level>
@@ -39,6 +39,19 @@
 		</installation>
 
 		<history>
+			<entry>
+				<date>2015-11-04</date>
+				<rev-version>7.0.2</rev-version>
+				<changelog lang="en">
+					<change>Fixed curl issue.</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2015-11-04</date>
+				<rev-version>7.0.1</rev-version>
+				<changelog lang="en">
+					<change>XML Fix</change>
+			</entry>
 			<entry>
 				<date>2015-11-04</date>
 				<rev-version>7.0.0</rev-version>
