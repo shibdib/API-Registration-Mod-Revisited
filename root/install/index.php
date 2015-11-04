@@ -128,6 +128,40 @@ include($phpbb_root_path . 'umil/umil_auto.' . $phpEx);
  function umil_eveapi_7_0_5($action, $version)
 {
     global $db, $table_prefix, $umil;
+	
+	    if($action == 'uninstall')
+    {
+        // Modifications to the Group-settings
+        // ****************************************************************************************************
+        // 
+        // Backing up Group settings
+        if ($umil->table_exists('eveapi_grouptmp'))
+        {
+            $umil->table_remove('eveapi_grouptmp');
+        }
+
+        $umil->table_add('eveapi_grouptmp', array(
+            'COLUMNS'        => array(
+                'group_id'					=> array('UINT:8', 0),
+                'group_eveapi_special'		=> array('TINT:1', 0),
+                'group_eveapi_ts3'			=> array('UINT:8', 0),
+                'group_eveapi_jabber'		=> array('TINT:1', 0),
+				'group_eveapi_openfire'		=> array('VCHAR:20', ''),
+            ),
+            'PRIMARY_KEY'    => 'group_id',
+        ));
+
+        $sql = "INSERT INTO eveapi_grouptmp (group_id, group_eveapi_special, group_eveapi_ts3, group_eveapi_jabber, group_eveapi_openfire) 
+                SELECT group_id, group_eveapi_special, group_eveapi_ts3, group_eveapi_jabber, group_eveapi_openfire
+                FROM " . GROUPS_TABLE;
+        $db->sql_query($sql);
+        
+        $umil->table_column_remove(GROUPS_TABLE, 'group_eveapi_special');
+        $umil->table_column_remove(GROUPS_TABLE, 'group_eveapi_ts3');
+        $umil->table_column_remove(GROUPS_TABLE, 'group_eveapi_jabber');
+		$umil->table_column_remove(GROUPS_TABLE, 'group_eveapi_openfire');
+        // ****************************************************************************************************
+    }
     
 	if($action == 'update')
     {

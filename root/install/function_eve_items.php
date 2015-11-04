@@ -591,26 +591,6 @@ function umil_eveapi_insert_items()
 			'categoryID' => 7,
 		),
 		array(
-			'itemID' => 434,
-			'itemName' => '1MN Microwarpdrive I',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 438,
-			'itemName' => '1MN Afterburner II',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 439,
-			'itemName' => '1MN Afterburner I',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 440,
-			'itemName' => '1MN Microwarpdrive II',
-			'categoryID' => 7,
-		),
-		array(
 			'itemID' => 442,
 			'itemName' => 'Cargo Scanner I',
 			'categoryID' => 7,
@@ -1958,26 +1938,6 @@ function umil_eveapi_insert_items()
 		array(
 			'itemID' => 1033,
 			'itemName' => 'Small Shield Booster II Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 1067,
-			'itemName' => '1MN Microwarpdrive I Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 1071,
-			'itemName' => '1MN Afterburner II Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 1072,
-			'itemName' => '1MN Afterburner I Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 1073,
-			'itemName' => '1MN Microwarpdrive II Blueprint',
 			'categoryID' => 9,
 		),
 		array(
@@ -12496,46 +12456,6 @@ function umil_eveapi_insert_items()
 			'categoryID' => 7,
 		),
 		array(
-			'itemID' => 5945,
-			'itemName' => 'Prototype 100MN Microwarpdrive I',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 5955,
-			'itemName' => 'Experimental 100MN Afterburner I',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 5971,
-			'itemName' => 'Upgraded 1MN Microwarpdrive I',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 5973,
-			'itemName' => 'Limited 1MN Microwarpdrive I',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 5975,
-			'itemName' => 'Experimental 10MN Microwarpdrive I',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 6001,
-			'itemName' => 'Limited 1MN Afterburner I',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 6003,
-			'itemName' => 'Experimental 1MN Afterburner I',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 6005,
-			'itemName' => 'Experimental 10MN Afterburner I',
-			'categoryID' => 7,
-		),
-		array(
 			'itemID' => 6041,
 			'itemName' => 'Hostile Target Acquisition I',
 			'categoryID' => 7,
@@ -17421,86 +17341,6 @@ function umil_eveapi_insert_items()
 			'categoryID' => 17,
 		),
 		array(
-			'itemID' => 12052,
-			'itemName' => '10MN Microwarpdrive I',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 12053,
-			'itemName' => '10MN Microwarpdrive I Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 12054,
-			'itemName' => '100MN Microwarpdrive I',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 12055,
-			'itemName' => '100MN Microwarpdrive I Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 12056,
-			'itemName' => '10MN Afterburner I',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 12057,
-			'itemName' => '10MN Afterburner I Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 12058,
-			'itemName' => '10MN Afterburner II',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 12059,
-			'itemName' => '10MN Afterburner II Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 12066,
-			'itemName' => '100MN Afterburner I',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 12067,
-			'itemName' => '100MN Afterburner I Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 12068,
-			'itemName' => '100MN Afterburner II',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 12069,
-			'itemName' => '100MN Afterburner II Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 12076,
-			'itemName' => '10MN Microwarpdrive II',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 12077,
-			'itemName' => '10MN Microwarpdrive II Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 12084,
-			'itemName' => '100MN Microwarpdrive II',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 12085,
-			'itemName' => '100MN Microwarpdrive II Blueprint',
-			'categoryID' => 9,
-		),
-		array(
 			'itemID' => 12092,
 			'itemName' => 'Interceptors',
 			'categoryID' => 16,
@@ -19961,66 +19801,6 @@ function umil_eveapi_insert_items()
 			'categoryID' => 7,
 		),
 		array(
-			'itemID' => 14102,
-			'itemName' => 'Domination 100MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14104,
-			'itemName' => 'Shadow Serpentis 100MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14106,
-			'itemName' => 'Domination 10MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14108,
-			'itemName' => 'Shadow Serpentis 10MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14110,
-			'itemName' => 'Domination 1MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14112,
-			'itemName' => 'Shadow Serpentis 1MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14114,
-			'itemName' => 'Domination 100MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14116,
-			'itemName' => 'Shadow Serpentis 100MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14118,
-			'itemName' => 'Domination 10MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14120,
-			'itemName' => 'Shadow Serpentis 10MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14122,
-			'itemName' => 'Domination 1MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14124,
-			'itemName' => 'Shadow Serpentis 1MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
 			'itemID' => 14126,
 			'itemName' => 'Domination Overdrive Injector',
 			'categoryID' => 7,
@@ -20729,86 +20509,6 @@ function umil_eveapi_insert_items()
 			'itemID' => 14483,
 			'itemName' => 'Drezins DNA',
 			'categoryID' => 17,
-		),
-		array(
-			'itemID' => 14484,
-			'itemName' => 'Mizuro\'s Modified 100MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14486,
-			'itemName' => 'Hakim\'s Modified 100MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14488,
-			'itemName' => 'Gotan\'s Modified 100MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14490,
-			'itemName' => 'Tobias\' Modified 100MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14492,
-			'itemName' => 'Mizuro\'s Modified 100MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14494,
-			'itemName' => 'Hakim\'s Modified 100MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14496,
-			'itemName' => 'Gotan\'s Modified 100MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14498,
-			'itemName' => 'Tobias\' Modified 100MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14500,
-			'itemName' => 'Brynn\'s Modified 100MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14502,
-			'itemName' => 'Tuvan\'s Modified 100MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14504,
-			'itemName' => 'Setele\'s Modified 100MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14506,
-			'itemName' => 'Cormack\'s Modified 100MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14508,
-			'itemName' => 'Brynn\'s Modified 100MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14510,
-			'itemName' => 'Tuvan\'s Modified 100MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14512,
-			'itemName' => 'Setele\'s Modified 100MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 14514,
-			'itemName' => 'Cormack\'s Modified 100MN Microwarpdrive',
-			'categoryID' => 7,
 		),
 		array(
 			'itemID' => 14516,
@@ -23754,126 +23454,6 @@ function umil_eveapi_insert_items()
 			'itemID' => 15746,
 			'itemName' => 'Federation Navy Large Armor Repairer',
 			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 15747,
-			'itemName' => 'Republic Fleet 1MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 15748,
-			'itemName' => 'Republic Fleet 1MN Microwarpdrive Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 15749,
-			'itemName' => 'Republic Fleet 1MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 15750,
-			'itemName' => 'Republic Fleet 1MN Afterburner Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 15751,
-			'itemName' => 'Republic Fleet 10MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 15752,
-			'itemName' => 'Republic Fleet 10MN Microwarpdrive Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 15753,
-			'itemName' => 'Republic Fleet 10MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 15754,
-			'itemName' => 'Republic Fleet 10MN Afterburner Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 15755,
-			'itemName' => 'Republic Fleet 100MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 15756,
-			'itemName' => 'Republic Fleet 100MN Microwarpdrive Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 15757,
-			'itemName' => 'Republic Fleet 100MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 15758,
-			'itemName' => 'Republic Fleet 100MN Afterburner Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 15759,
-			'itemName' => 'Federation Navy 1MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 15760,
-			'itemName' => 'Federation Navy 1MN Microwarpdrive Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 15761,
-			'itemName' => 'Federation Navy 1MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 15762,
-			'itemName' => 'Federation Navy 1MN Afterburner Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 15764,
-			'itemName' => 'Federation Navy 10MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 15765,
-			'itemName' => 'Federation Navy 10MN Microwarpdrive Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 15766,
-			'itemName' => 'Federation Navy 10MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 15767,
-			'itemName' => 'Federation Navy 10MN Afterburner Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 15768,
-			'itemName' => 'Federation Navy 100MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 15769,
-			'itemName' => 'Federation Navy 100MN Microwarpdrive Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 15770,
-			'itemName' => 'Federation Navy 100MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 15771,
-			'itemName' => 'Federation Navy 100MN Afterburner Blueprint',
-			'categoryID' => 9,
 		),
 		array(
 			'itemID' => 15772,
@@ -29396,109 +28976,9 @@ function umil_eveapi_insert_items()
 			'categoryID' => 17,
 		),
 		array(
-			'itemID' => 18658,
-			'itemName' => 'Gistii C-Type 1MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 18660,
-			'itemName' => 'Gistum C-Type 10MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 18662,
-			'itemName' => 'Gist C-Type 100MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 18664,
-			'itemName' => 'Gistii B-Type 1MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 18666,
-			'itemName' => 'Gistum B-Type 10MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 18668,
-			'itemName' => 'Gist B-Type 100MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 18670,
-			'itemName' => 'Gistii A-Type 1MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 18672,
-			'itemName' => 'Gistum A-Type 10MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 18674,
-			'itemName' => 'Gist A-Type 100MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 18676,
-			'itemName' => 'Gist X-Type 100MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
 			'itemID' => 18679,
 			'itemName' => 'Zelfarios Kashnostramus\'s Tag',
 			'categoryID' => 17,
-		),
-		array(
-			'itemID' => 18680,
-			'itemName' => 'Coreli C-Type 1MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 18682,
-			'itemName' => 'Corelum C-Type 10MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 18684,
-			'itemName' => 'Core C-Type 100MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 18686,
-			'itemName' => 'Coreli B-Type 1MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 18688,
-			'itemName' => 'Corelum B-Type 10MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 18690,
-			'itemName' => 'Core B-Type 100MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 18692,
-			'itemName' => 'Coreli A-Type 1MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 18694,
-			'itemName' => 'Corelum A-Type 10MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 18696,
-			'itemName' => 'Core A-Type 100MN Afterburner',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 18698,
-			'itemName' => 'Core X-Type 100MN Afterburner',
-			'categoryID' => 7,
 		),
 		array(
 			'itemID' => 18700,
@@ -31018,106 +30498,6 @@ function umil_eveapi_insert_items()
 		array(
 			'itemID' => 19311,
 			'itemName' => 'Pith A-Type Shield Boost Amplifier',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19313,
-			'itemName' => 'Coreli C-Type 1MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19315,
-			'itemName' => 'Corelum C-Type 10MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19317,
-			'itemName' => 'Core C-Type 100MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19319,
-			'itemName' => 'Coreli B-Type 1MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19321,
-			'itemName' => 'Corelum B-Type 10MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19323,
-			'itemName' => 'Core B-Type 100MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19325,
-			'itemName' => 'Coreli A-Type 1MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19327,
-			'itemName' => 'Corelum A-Type 10MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19329,
-			'itemName' => 'Core A-Type 100MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19335,
-			'itemName' => 'Core X-Type 100MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19337,
-			'itemName' => 'Gistii C-Type 1MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19339,
-			'itemName' => 'Gistum C-Type 10MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19341,
-			'itemName' => 'Gist C-Type 100MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19343,
-			'itemName' => 'Gistii B-Type 1MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19345,
-			'itemName' => 'Gistum B-Type 10MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19347,
-			'itemName' => 'Gist B-Type 100MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19349,
-			'itemName' => 'Gistii A-Type 1MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19351,
-			'itemName' => 'Gistum A-Type 10MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19353,
-			'itemName' => 'Gist A-Type 100MN Microwarpdrive',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 19359,
-			'itemName' => 'Gist X-Type 100MN Microwarpdrive',
 			'categoryID' => 7,
 		),
 		array(
@@ -35051,66 +34431,6 @@ function umil_eveapi_insert_items()
 			'categoryID' => 17,
 		),
 		array(
-			'itemID' => 21470,
-			'itemName' => '1MN Analog Booster Rockets',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 21471,
-			'itemName' => '1MN Analog Booster Rockets Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 21472,
-			'itemName' => '10MN Analog Booster Rockets',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 21473,
-			'itemName' => '10MN Analog Booster Rockets Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 21474,
-			'itemName' => '100MN Analog Booster Rockets',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 21475,
-			'itemName' => '100MN Analog Booster Rockets Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 21476,
-			'itemName' => '1MN Digital Booster Rockets',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 21477,
-			'itemName' => '1MN Digital Booster Rockets Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 21478,
-			'itemName' => '10MN Digital Booster Rockets',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 21479,
-			'itemName' => '10MN Digital Booster Rockets Blueprint',
-			'categoryID' => 9,
-		),
-		array(
-			'itemID' => 21480,
-			'itemName' => '100MN Digital Booster Rockets',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 21481,
-			'itemName' => '100MN Digital Booster Rockets Blueprint',
-			'categoryID' => 9,
-		),
-		array(
 			'itemID' => 21482,
 			'itemName' => 'Ballistic \'Purge\' Targeting System I',
 			'categoryID' => 7,
@@ -36093,11 +35413,6 @@ function umil_eveapi_insert_items()
 		array(
 			'itemID' => 21855,
 			'itemName' => 'Civilian Expanded Cargohold',
-			'categoryID' => 7,
-		),
-		array(
-			'itemID' => 21857,
-			'itemName' => 'Civilian Afterburner',
 			'categoryID' => 7,
 		),
 		array(
