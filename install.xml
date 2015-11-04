@@ -41,6 +41,13 @@
 		<history>
 			<entry>
 				<date>2015-11-04</date>
+				<rev-version>7.0.4</rev-version>
+				<changelog lang="en">
+					<change>Install error fixed.</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2015-11-04</date>
 				<rev-version>7.0.3</rev-version>
 				<changelog lang="en">
 					<change>Formatting error fixed.</change>
