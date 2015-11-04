@@ -49,6 +49,10 @@ $version_config_name = 'eveapi_version';
 * The version numbering must otherwise be compatible with the version_compare function - http://php.net/manual/en/function.version-compare.php
 */
 $versions = array(
+	'7.0.5'	=> array(
+		'custom'	=> 'umil_eveapi_7_0_5',
+	),
+	
 	'7.0.4'	=> array(
 		'custom'	=> 'umil_eveapi_7_0_4',
 	),
@@ -121,6 +125,19 @@ include($phpbb_root_path . 'umil/umil_auto.' . $phpEx);
 /*
  * Functions based on version
  */
+ function umil_eveapi_7_0_5($action, $version)
+{
+    global $db, $table_prefix, $umil;
+    
+	if($action == 'update')
+    {
+        umil_eveapi_update_eve_database();
+    }
+	
+    $umil->cache_purge();
+
+    return 'UMIL_EVEAPI_7_0_5';
+}
  function umil_eveapi_7_0_4($action, $version)
 {
     global $db, $table_prefix, $umil;
