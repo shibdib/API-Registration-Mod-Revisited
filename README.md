@@ -12,27 +12,19 @@ Requirements
 - Database of some sort (Preferably MYSQL)
 - PHP Installed
 ```
-Change Log From Cyerus Last Release
------------
-```
-2015-11-04
-
-7.0.0
-- Project officially taken over by Mr Twinkie (Shibdib) with the blessing of Cyerus.
-- API Links updated on new user registration and re-activation.
-- Primary phpBB version set to 3.0.14
-- Disabled part of the cron that de-activates accounts on errors as it caused a lot of false positives. (Working on a fix)
-- Mod renamed to represent change in primary developer.
-```
 
 Install
 -----------
 ```
 1. Install a clean version of phpBB 3.0.14 and AUTOMOD
 
-2. Download this as a .zip and install using AUTOMOD
+2. Download the latest release as a .zip and install using AUTOMOD
 
-3. Be sure to follow directions and remove install folder at the end.
+3. Clear forum cache
+
+4. Go to *url.com*/install and select install
+
+5. Once installed, delete the install folder from your forum
 ```
 
 Update
