@@ -60295,6 +60295,618 @@ function umil_eveapi_insert_items()
 			'itemName' => 'Caldari 1M Bounty Reimbursement Tag',
 			'categoryID' => 17,
 		),
+		 array(
+'itemID' => '434',
+'itemName' => '5MN Microwarpdrive I',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '438',
+'itemName' => '1MN Afterburner II',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '439',
+'itemName' => '1MN Afterburner I',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '440',
+'itemName' => '5MN Microwarpdrive II',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '5945',
+'itemName' => '500MN Cold-Gas Enduring Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '5955',
+'itemName' => '100MN Monopropellant Enduring Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '5971',
+'itemName' => '5MN Cold-Gas Enduring Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '5973',
+'itemName' => '5MN Y-T8 Compact Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '5975',
+'itemName' => '50MN Cold-Gas Enduring Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '6001',
+'itemName' => '1MN Y-S8 Compact Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '6003',
+'itemName' => '1MN Monopropellant Enduring Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '6005',
+'itemName' => '10MN Monopropellant Enduring Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '12052',
+'itemName' => '50MN Microwarpdrive I',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '12054',
+'itemName' => '500MN Microwarpdrive I',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '12056',
+'itemName' => '10MN Afterburner I',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '12058',
+'itemName' => '10MN Afterburner II',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '12066',
+'itemName' => '100MN Afterburner I',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '12068',
+'itemName' => '100MN Afterburner II',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '12076',
+'itemName' => '50MN Microwarpdrive II',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '12084',
+'itemName' => '500MN Microwarpdrive II',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14102',
+'itemName' => 'Domination 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14104',
+'itemName' => 'Shadow Serpentis 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14106',
+'itemName' => 'Domination 10MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14108',
+'itemName' => 'Shadow Serpentis 10MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14110',
+'itemName' => 'Domination 1MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14112',
+'itemName' => 'Shadow Serpentis 1MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14114',
+'itemName' => 'Domination 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14116',
+'itemName' => 'Shadow Serpentis 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14118',
+'itemName' => 'Domination 50MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14120',
+'itemName' => 'Shadow Serpentis 50MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14122',
+'itemName' => 'Domination 5MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14124',
+'itemName' => 'Shadow Serpentis 5MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14484',
+'itemName' => 'Mizuro\'s Modified 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14486',
+'itemName' => 'Hakim\'s Modified 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14488',
+'itemName' => 'Gotan\'s Modified 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14490',
+'itemName' => 'Tobias\' Modified 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14492',
+'itemName' => 'Mizuro\'s Modified 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14494',
+'itemName' => 'Hakim\'s Modified 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14496',
+'itemName' => 'Gotan\'s Modified 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14498',
+'itemName' => 'Tobias\' Modified 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14500',
+'itemName' => 'Brynn\'s Modified 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14502',
+'itemName' => 'Tuvan\'s Modified 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14504',
+'itemName' => 'Setele\'s Modified 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14506',
+'itemName' => 'Cormack\'s Modified 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14508',
+'itemName' => 'Brynn\'s Modified 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14510',
+'itemName' => 'Tuvan\'s Modified 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14512',
+'itemName' => 'Setele\'s Modified 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '14514',
+'itemName' => 'Cormack\'s Modified 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '15747',
+'itemName' => 'Republic Fleet 5MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '15749',
+'itemName' => 'Republic Fleet 1MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '15751',
+'itemName' => 'Republic Fleet 50MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '15753',
+'itemName' => 'Republic Fleet 10MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '15755',
+'itemName' => 'Republic Fleet 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '15757',
+'itemName' => 'Republic Fleet 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '15759',
+'itemName' => 'Federation Navy 5MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '15761',
+'itemName' => 'Federation Navy 1MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '15764',
+'itemName' => 'Federation Navy 50MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '15766',
+'itemName' => 'Federation Navy 10MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '15768',
+'itemName' => 'Federation Navy 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '15770',
+'itemName' => 'Federation Navy 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18658',
+'itemName' => 'Gistii C-Type 1MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18660',
+'itemName' => 'Gistum C-Type 10MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18662',
+'itemName' => 'Gist C-Type 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18664',
+'itemName' => 'Gistii B-Type 1MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18666',
+'itemName' => 'Gistum B-Type 10MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18668',
+'itemName' => 'Gist B-Type 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18670',
+'itemName' => 'Gistii A-Type 1MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18672',
+'itemName' => 'Gistum A-Type 10MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18674',
+'itemName' => 'Gist A-Type 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18676',
+'itemName' => 'Gist X-Type 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18680',
+'itemName' => 'Coreli C-Type 1MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18682',
+'itemName' => 'Corelum C-Type 10MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18684',
+'itemName' => 'Core C-Type 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18686',
+'itemName' => 'Coreli B-Type 1MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18688',
+'itemName' => 'Corelum B-Type 10MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18690',
+'itemName' => 'Core B-Type 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18692',
+'itemName' => 'Coreli A-Type 1MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18694',
+'itemName' => 'Corelum A-Type 10MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18696',
+'itemName' => 'Core A-Type 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '18698',
+'itemName' => 'Core X-Type 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19313',
+'itemName' => 'Coreli C-Type 5MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19315',
+'itemName' => 'Corelum C-Type 50MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19317',
+'itemName' => 'Core C-Type 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19319',
+'itemName' => 'Coreli B-Type 5MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19321',
+'itemName' => 'Corelum B-Type 50MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19323',
+'itemName' => 'Core B-Type 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19325',
+'itemName' => 'Coreli A-Type 5MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19327',
+'itemName' => 'Corelum A-Type 50MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19329',
+'itemName' => 'Core A-Type 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19335',
+'itemName' => 'Core X-Type 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19337',
+'itemName' => 'Gistii C-Type 5MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19339',
+'itemName' => 'Gistum C-Type 50MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19341',
+'itemName' => 'Gist C-Type 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19343',
+'itemName' => 'Gistii B-Type 5MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19345',
+'itemName' => 'Gistum B-Type 50MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19347',
+'itemName' => 'Gist B-Type 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19349',
+'itemName' => 'Gistii A-Type 5MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19351',
+'itemName' => 'Gistum A-Type 50MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19353',
+'itemName' => 'Gist A-Type 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19359',
+'itemName' => 'Gist X-Type 500MN Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '19491',
+'itemName' => 'Thukker Modified 100MN Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '21470',
+'itemName' => '1MN Analog Booster Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '21472',
+'itemName' => '10MN Analog Booster Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '21474',
+'itemName' => '100MN Analog Booster Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '21476',
+'itemName' => '5MN Digital Booster Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '21478',
+'itemName' => '50MN Digital Booster Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '21480',
+'itemName' => '500MN Digital Booster Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '21857',
+'itemName' => '1MN Civilian Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '35656',
+'itemName' => '10MN Y-S8 Compact Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '35657',
+'itemName' => '100MN Y-S8 Compact Afterburner',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '35658',
+'itemName' => '5MN Quad LiF Restrained Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '35659',
+'itemName' => '50MN Y-T8 Compact Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '35660',
+'itemName' => '50MN Quad LiF Restrained Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '35661',
+'itemName' => '500MN Y-T8 Compact Microwarpdrive',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '35662',
+'itemName' => '500MN Quad LiF Restrained Microwarpdrive',
+'categoryID' => '7'),
+  array(
+'itemID' => '34593',
+'itemName' => 'Entosis Link I',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '34595',
+'itemName' => 'Entosis Link II',
+'categoryID' => '7'),
+  array(
+'itemID' => '35770',
+'itemName' => 'Missile Guidance Enhancer I',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '35771',
+'itemName' => 'Missile Guidance Enhancer II',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '35774',
+'itemName' => 'Pro-Nav Compact Missile Guidance Enhancer',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '35788',
+'itemName' => 'Missile Guidance Computer I',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '35789',
+'itemName' => 'Astro-Inertial Compact Missile Guidance Computer',
+'categoryID' => '7'),
+
+  array(
+'itemID' => '35790',
+'itemName' => 'Missile Guidance Computer II',
+'categoryID' => '7'),
 	));
 }
 // </editor-fold>
