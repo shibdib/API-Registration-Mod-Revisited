@@ -17,7 +17,7 @@ Install
 ```
 1. Install a clean version of phpBB 3.0.14 and AUTOMOD
 
-2. Download the latest release as a .zip and install using AUTOMOD
+2. Download the latest FULL release as a .zip and install using AUTOMOD
 
 3. Clear forum cache
 
@@ -26,6 +26,8 @@ Install
 5. Once installed, delete the install folder from your forum
 
 6. Use AUTOMOD to install the mod into your theme of choice
+
+7. If one is available, follow the instructions below to install a DB Update
 ```
 
 Update (For DB Updates)
