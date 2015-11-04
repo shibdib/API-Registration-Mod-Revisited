@@ -44,7 +44,7 @@ class OpenFireUserService
         'plugin'		=> '/plugins/userService/userservice',
         'secret'		=> 'SuperSecret',
 
-        'useCurl'		=> true,
+        'useCurl'		=> false,
         'useSSL'		=> false,
 
         'subscriptions'	=> array(-1, 0, 1, 2)
