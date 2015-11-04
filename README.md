@@ -18,6 +18,7 @@ Install
 ```
 1. Install a clean version of phpBB 3.0.14 and AUTOMOD
 
+
 2. Download the latest release as a .zip and install using AUTOMOD
 
 3. Clear forum cache
@@ -27,7 +28,21 @@ Install
 5. Once installed, delete the install folder from your forum
 ```
 
-Update
+Update (For DB Updates)
+-----------
+```
+1. Clear forum cache
+
+2. Download the latest release as a .zip and install using AUTOMOD
+
+3. Clear forum cache
+
+4. Go to *url.com*/install and select update
+
+5. Once installed, delete the install folder from your forum
+```
+
+Update (For Full Releases)
 -----------
 ```
 1. Uninstall EVE API 6.3.0 from the AutoMOD section of the ACP.
