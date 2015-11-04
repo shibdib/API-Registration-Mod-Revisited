@@ -35,7 +35,7 @@
 		<installation>
 			<level>moderate</level>
 			<time>600</time>
-			<target-version>3.0.12</target-version>
+			<target-version>3.0.14</target-version>
 		</installation>
 
 		<history>

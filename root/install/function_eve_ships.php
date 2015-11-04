@@ -315,7 +315,7 @@ function umil_eveapi_insert_ships()
   array('typeID' => '34590','typeName' => 'Victorieux Luxury Yacht','Low' => '4','Medium' => '1','High' => '1','Drone' => '0','Rig' => '3','Subsystem' => '0','raceID' => '8','raceName' => 'Gallente','Tech' => 'Tech I','groupName' => 'Cruiser','marketGroupName' => 'Special Edition Cruisers','Icon' => 'Gallente'),
   array('typeID' => '34828','typeName' => 'Jackdaw','Low' => '2','Medium' => '6','High' => '6','Drone' => '0','Rig' => '3','Subsystem' => '0','raceID' => '1','raceName' => 'Caldari','Tech' => 'Tech III','groupName' => 'Tactical Destroyer','marketGroupName' => 'Caldari','Icon' => 'Caldari')
 );
-	));
+	);
 }
 // </editor-fold>
 

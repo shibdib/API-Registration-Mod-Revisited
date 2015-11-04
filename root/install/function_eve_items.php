@@ -16455,7 +16455,7 @@ function umil_eveapi_insert_items()
   array('itemID' => '33391','itemName' => 'Alliance Tournament IX: Darkside.','categoryID' => '63'),
   array('itemID' => '33392','itemName' => 'Alliance Tournament X: HUN Reloaded','categoryID' => '63')
 );
-	));
+	);
 }
 // </editor-fold>
 
