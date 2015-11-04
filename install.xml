@@ -30,7 +30,7 @@
 			</author>
 		</author-group>
 
-		<mod-version>7.0.0</mod-version>
+		<mod-version>7.0.2</mod-version>
 
 		<installation>
 			<level>moderate</level>
@@ -39,6 +39,19 @@
 		</installation>
 
 		<history>
+			<entry>
+				<date>2015-11-04</date>
+				<rev-version>7.0.2</rev-version>
+				<changelog lang="en">
+					<change>Fixed curl issue.</change>
+				</changelog>
+			</entry>
+			<entry>
+				<date>2015-11-04</date>
+				<rev-version>7.0.1</rev-version>
+				<changelog lang="en">
+					<change>XML Fix</change>
+			</entry>
 			<entry>
 				<date>2015-11-04</date>
 				<rev-version>7.0.0</rev-version>
