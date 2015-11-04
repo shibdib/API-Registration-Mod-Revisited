@@ -44,11 +44,11 @@ Update (For DB Updates)
 Update (For Full Releases)
 -----------
 ```
-1. Uninstall EVE API 6.3.0 from the AutoMOD section of the ACP.
+1. Uninstall EVE API x.x.x from the AutoMOD section of the ACP.
 
 2. Clear forum cache
 
-3. Upload and install EVE API 6.3.1 to the AutoMOD section of the ACP.
+3. Upload and install EVE API x.x.x to the AutoMOD section of the ACP.
 
 4. Clear forum cache again
 
