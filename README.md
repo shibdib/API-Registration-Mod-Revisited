@@ -24,6 +24,8 @@ Install
 4. Go to *url.com*/install and select install
 
 5. Once installed, delete the install folder from your forum
+
+6. Use AUTOMOD to install the mod into your theme of choice
 ```
 
 Update (For DB Updates)
