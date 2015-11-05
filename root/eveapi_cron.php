@@ -35,7 +35,7 @@ $auth->acl($user->data);
 $user->setup();
 
 // Page header
-page_header("EVE API Revisited for phpBB 3.x - CRONJOB!", false);
+page_header("EVE API Revisited - CRONJOB!", false);
 
 // This script will take a while.  We should disable max_execution_time.
 @ini_set('max_execution_time', 900);
@@ -336,14 +336,14 @@ if($config['eveapi_validation'])
                         eveapi_disableForumAccount($row['user_id'], $row['username'], $row['eveapi_ts'], INACTIVE_EVEAPI_NONMEMBER, $ts3_VirtualServer);
                     }
                 }
-                //else
-                //{
+                else
+                {
                     // error reported by eveapi_checkThisCharacter(), now use $characterInfo["disable"] to determine whether or not to disable.
-                    //if($characterInfo["disable"])
-                    //{
-                    //    eveapi_disableForumAccount($row['user_id'], $row['username'], $row['eveapi_ts'], INACTIVE_EVEAPI_INVALID, $ts3_VirtualServer);
-                    //}
-                //}
+                    if($characterInfo["disable"])
+                    {
+                        eveapi_disableForumAccount($row['user_id'], $row['username'], $row['eveapi_ts'], INACTIVE_EVEAPI_INVALID, $ts3_VirtualServer);
+                    }
+                }
             }
             else
             {
