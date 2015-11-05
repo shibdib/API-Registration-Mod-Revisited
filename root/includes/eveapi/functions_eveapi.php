@@ -489,7 +489,7 @@ function eveapi_setForumGroups($userId, $forumGroupsNew, $characterName = "---")
 */
 function eveapi_checkDisableOnApiError($errorNr)
 {
-    if(($errorNr >= 200 && $errorNr < 300) ||  $errorNr == 521)
+    if(($errorNr >= 222 && $errorNr < 300) ||  $errorNr == 201 ||  $errorNr == 521)
     {
         return true;
     }
