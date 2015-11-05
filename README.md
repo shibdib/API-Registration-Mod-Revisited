@@ -27,7 +27,7 @@ Install
 
 6. Use AUTOMOD to install the mod into your theme of choice
 
-7. Be sure to setup a cronjob to run the eveapi_cron.php file in your forum root directory. Recommended not to do it more than once per every two hours or risk false positives because of API timeouts.
+7. Be sure to setup a cronjob to run the eveapi_cron.php file in your forum root directory. Recommended not to do it more than once every three hours or risk false positives because of API timeouts.
 ```
 
 Update
