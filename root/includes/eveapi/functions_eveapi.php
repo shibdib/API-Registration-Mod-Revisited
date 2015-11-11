@@ -259,10 +259,10 @@ function eveapi_setOpenFireAccess($userId, $jabber = array(), $extraJabber = arr
 				{
 					// User doesn't exist yet, time to create the user				
 					// Create a random password
-					//$password = eveapi_randomString(8);
+					$password = eveapi_randomString(8);
 
 					// Create the actual user
-					$pofus->addUser($clean_username, $data['eveapi_jabberpass'], $data['username'], $data['user_email'], $jabberGroups);
+					$pofus->addUser($clean_username, $password, $data['username'], $data['user_email'], $jabberGroups);
 					
 					// Cronlog it
 					cronlog("Adding OpenFire account with groups => "  . implode(", ", $jabberGroups), $characterName);

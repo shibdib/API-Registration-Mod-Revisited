@@ -173,10 +173,6 @@ include($phpbb_root_path . 'umil/umil_auto.' . $phpEx);
     
     if($action == 'install')
     {
-		if (!$umil->table_column_exists(USERS_TABLE, 'eveapi_jabberpass'))
-        {
-            $umil->table_column_add(USERS_TABLE, 'eveapi_jabberpass', array('VCHAR:64', ''));
-        }
         // Modifications to the Group-settings
         if (!$umil->table_column_exists(GROUPS_TABLE, 'group_eveapi_special'))
         {
@@ -222,12 +218,7 @@ include($phpbb_root_path . 'umil/umil_auto.' . $phpEx);
     }
     
     if($action == 'update')
-		
     {
-		if (!$umil->table_column_exists(USERS_TABLE, 'eveapi_jabberpass'))
-        {
-            $umil->table_column_add(USERS_TABLE, 'eveapi_jabberpass', array('VCHAR:64', ''));
-        }
         // Rubicon 1.1 stuff, yay!
         umil_eveapi_update_eve_database();
         

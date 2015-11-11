@@ -44,7 +44,6 @@
 				<rev-version>7.0.7</rev-version>
 				<changelog lang="en">
 					<change>Fixed a few PHP Errors</change>
-					<change>User now sets jabber password at registration (Needs bugtesting with EJabberd)</change>
 				</changelog>
 			</entry>
 			<entry>
@@ -755,7 +754,6 @@
 			$data = array_merge($data, array(
 				'eveapi_keyid'	=> request_var('eveapi_keyid', '', true),
 				'eveapi_vcode'	=> request_var('eveapi_vcode', '', true),
-				'eveapi_jabberpass'	=> request_var('jabberpass', '', true),
 			));
 		} ]]></action>
 			</edit>
@@ -830,7 +828,6 @@
 					$user_row = array_merge($user_row, array(
 						'eveapi_keyid'  => $data['eveapi_keyid'],
 						'eveapi_vcode'  => $data['eveapi_vcode'],
-						'eveapi_jabberpass'  => $data['eveapi_jabberpass'],
 					));
 				} ]]></action>
 			</edit>
@@ -1425,7 +1422,6 @@
 		$sql_ary = array_merge($sql_ary,array(
 			'eveapi_keyid'	=> $user_row['eveapi_keyid'],
 			'eveapi_vcode'	=> $user_row['eveapi_vcode'],
-			'eveapi_jabberpass'	=> $user_row['eveapi_jabberpass'],
 		));
 	}]]></action>
 			</edit>
@@ -1642,10 +1638,6 @@
 		<dt><label for="eveapi_vcode">{L_EVEAPI_VCODE}:</label></dt>
 		<dd><input type="text" tabindex="7" name="eveapi_vcode" id="eveapi_vcode" size="64" maxlength="64" value="{EVEAPI_VCODE}" class="inputbox autowidth" title="{L_EVEAPI_VCODE}" /></dd>
 		<dd>Click <a href="https://community.eveonline.com/support/api-key//createpredefined?accessmask={L_EVEAPI_ACCESSMASK}" target="_blank">here</a> to create an API key with the correct permissions. Don't forget to set it as &#039;No Expiry&#039;!<br />It can sometimes take up to 15 minutes before the new API key is activated.</dd>
-	</dl>
-	<dl>
-		<dt><label for="jabberpass">Jabber Password:</label><br /><span>{L_PASSWORD_EXPLAIN}</span></dt>
-		<dd><input type="password" tabindex="4" name="jabberpass" id="jabberpass" size="25" value="{PASSWORD}" class="inputbox autowidth" title="Jabber Password" /></dd>
 	</dl>
 	<!-- ENDIF --> ]]></action>
 			</edit>
