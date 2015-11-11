@@ -464,24 +464,24 @@ function eveapi_setForumGroups($userId, $forumGroupsNew, $characterName = "---")
 	group_user_add(2, $userId, false, false, true);
 
 	// User should always be part of this group, add the TeamSpeak groupId to the list if the group  >0
-	//if($forumGroupInfo[2]['group_eveapi_ts3'])
-	//{
-	//	$returnGroups["TS"][] = $forumGroupInfo[2]['group_eveapi_ts3'];
-	//}
+	if($forumGroupInfo[2]['group_eveapi_ts3'])
+	{
+		$returnGroups["TS"][] = $forumGroupInfo[2]['group_eveapi_ts3'];
+	}
 	
 	// And ejabberd
-	//if($forumGroupInfo[2]['group_eveapi_jabber'])
-	//{
-	//	$returnGroups["jabber"] = $forumGroupInfo[2]['group_eveapi_jabber'];
-	//}
+	if($forumGroupInfo[2]['group_eveapi_jabber'])
+	{
+		$returnGroups["jabber"] = $forumGroupInfo[2]['group_eveapi_jabber'];
+	}
 	
 	// And OpenFire
-	//if($forumGroupInfo[2]['group_eveapi_openfire'] != "")
-	//{
-	//	$returnGroups["openfire"][] = $forumGroupInfo[2]['group_eveapi_openfire'];
-	//}
+	if($forumGroupInfo[2]['group_eveapi_openfire'] != "")
+	{
+		$returnGroups["openfire"][] = $forumGroupInfo[2]['group_eveapi_openfire'];
+	}
     
-    //return $returnGroups;
+    return $returnGroups;
 }
 
 /**
