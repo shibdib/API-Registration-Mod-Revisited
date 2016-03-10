@@ -1,6 +1,9 @@
 # phpBB-3.x-API-Registration-Mod-Revisited
 
 
+[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/shibdib/API-Registration-Mod-Revisited.svg)](http://isitmaintained.com/project/shibdib/API-Registration-Mod-Revisited "Average time to resolve an issue")  [![Percentage of issues still open](http://isitmaintained.com/badge/open/shibdib/API-Registration-Mod-Revisited.svg)](http://isitmaintained.com/project/shibdib/API-Registration-Mod-Revisited "Percentage of issues still open")
+
+
 Cyerus brought us this mod and it's up to us to keep it running smoothly. Pull requests highly encouraged.
 
 
