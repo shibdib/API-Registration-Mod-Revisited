@@ -33,7 +33,17 @@ Install
 7. Be sure to setup a cronjob to run the eveapi_cron.php file in your forum root directory. Recommended not to do it more than once every three hours or risk false positives because of API timeouts.
 ```
 
-Update
+Database Update
+-----------
+```
+The latest database item update is included in the db folder and must be manually added to your mysql install.
+
+This is most easily done using phpmyadmin but can be done from the command line as well with the following command
+
+mysql -u username -p database_name < file.sql   (with database_name being the name of your forum database, and file.sql being the full path to the sql file in the db folder.)
+```
+
+Full Update
 -----------
 ```
 1. Uninstall EVE API x.x.x from the AutoMOD section of the ACP.
